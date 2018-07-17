@@ -1,0 +1,11 @@
+# -*- Mode: python; py-indent-offset: 4; indent-tabs-mode: nil; coding: utf-8; -*-
+
+def build(bld):
+    obj = bld.create_ns3_program('qkd_channel_test', ['qkd', 'internet', 'aodv', 'aodvq', 'dsr', 'dsdv','dsdvq','olsr', 'point-to-point'])
+    obj.source = 'qkd_channel_test.cc'
+
+    obj = bld.create_ns3_program('qkd_overlay_channel_test', ['qkd', 'internet', 'aodv', 'aodvq', 'dsr', 'dsdv','dsdvq','olsr', 'point-to-point'])
+    obj.source = 'qkd_overlay_channel_test.cc'
+
+    obj = bld.create_ns3_program('secoqc_p2p_qkd_system', ['qkd', 'internet', 'aodv', 'aodvq', 'dsr', 'dsdv','dsdvq','olsr', 'point-to-point'])
+    obj.source = 'secoqc_p2p_qkd_system.cc'

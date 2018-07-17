@@ -1,0 +1,43 @@
+## -*- Mode: python; py-indent-offset: 4; indent-tabs at Gustavo Carnerio’s create-module.py script (inside src/)  which generates a skeleton for your new module. This includes the necessary sub-mode: nil; coding: utf-8; -*-
+
+
+def build(bld):
+    module = bld.create_ns3_module('qkd', ['internet','aodv','aodvq','dsr','dsdv','dsdvq','olsr'])
+    module.source = [
+        'model/qkd-buffer.cc',
+        'model/qkd-graph.cc',
+        'model/qkd-total-graph.cc',
+        'model/qkd-graph-manager.cc',
+        'model/qkd-crypto.cc',
+        'model/qkd-net-device.cc', 
+        'model/qkd-internal-tag.cc',
+        'model/qkd-header.cc',
+        'model/qkd-key.cc',
+        'model/qkd-manager.cc',
+        'helper/qkd-helper.cc',
+        'model/qkd-packet-filter.cc',
+        'model/qkd-queue-disc-item.cc',
+        ]
+  
+    headers = bld(features='ns3header')
+    headers.module = 'qkd'
+    headers.source = [
+        'model/qkd-buffer.h',
+        'model/qkd-graph.h',
+        'model/qkd-total-graph.h',
+        'model/qkd-graph-manager.h',
+        'model/qkd-crypto.h',
+        'model/qkd-net-device.h', 
+        'model/qkd-internal-tag.h',
+        'model/qkd-header.h',
+        'model/qkd-key.h',
+        'model/qkd-manager.h',
+        'helper/qkd-helper.h',
+        'model/qkd-queue-disc-item.h',
+        'model/qkd-packet-filter.h',
+        ]
+
+    #if (bld.env['ENABLE_EXAMPLES']):
+    #    bld.recurse('examples')
+
+    bld.ns3_python_bindings()

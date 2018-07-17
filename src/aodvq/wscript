@@ -1,0 +1,42 @@
+## -*- Mode: python; py-indent-offset: 4; indent-tabs-mode: nil; coding: utf-8; -*-
+
+def build(bld):
+    module = bld.create_ns3_module('aodvq', ['internet', 'wifi'])
+    module.includes = '.'
+    module.source = [
+        'model/aodvq-id-cache.cc',
+        'model/aodvq-dpd.cc',
+        'model/aodvq-rtable.cc',
+        'model/aodvq-rqueue.cc',
+        'model/aodvq-packet.cc',
+        'model/aodvq-neighbor.cc',
+        'model/aodvq-routing-protocol.cc',
+        'helper/aodvq-helper.cc',
+        ]
+
+    aodvq_test = bld.create_ns3_module_test_library('aodvq')
+    aodvq_test.source = [
+        'test/aodvq-id-cache-test-suite.cc',
+        'test/aodvq-test-suite.cc',
+        'test/aodvq-regression.cc',
+        'test/bug-772.cc',
+        'test/loopback.cc',
+        ]
+
+    headers = bld(features='ns3header')
+    headers.module = 'aodvq'
+    headers.source = [
+        'model/aodvq-id-cache.h',
+        'model/aodvq-dpd.h',
+        'model/aodvq-rtable.h',
+        'model/aodvq-rqueue.h',
+        'model/aodvq-packet.h',
+        'model/aodvq-neighbor.h',
+        'model/aodvq-routing-protocol.h',
+        'helper/aodvq-helper.h',
+        ]
+
+    if bld.env['ENABLE_EXAMPLES']:
+        bld.recurse('examples')
+
+    bld.ns3_python_bindings()
