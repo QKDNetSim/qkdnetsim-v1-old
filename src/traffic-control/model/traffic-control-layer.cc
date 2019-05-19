@@ -95,6 +95,7 @@ void
 TrafficControlLayer::DoInitialize (void)
 {
   NS_LOG_FUNCTION (this);
+
   std::map<Ptr<NetDevice>, NetDeviceInfo>::iterator ndi;
   for (ndi = m_netDevices.begin (); ndi != m_netDevices.end (); ndi++)
     {
@@ -108,7 +109,7 @@ TrafficControlLayer::DoInitialize (void)
             {
               for (uint8_t i = 0; i < devQueueIface->GetNTxQueues (); i++)
                 {
-                  devQueueIface->GetTxQueue (i)->SetWakeCallback (MakeCallback (&QueueDisc::Run, ndi->second.m_rootQueueDisc));
+                  devQueueIface->GetTxQueue (i)->SetWakeCallback (MakeCallback (&QueueDisc::Run, ndi->second.m_rootQueueDisc)); 
                   ndi->second.m_queueDiscsToWake.push_back (ndi->second.m_rootQueueDisc);
                 }
             }
@@ -365,6 +366,10 @@ TrafficControlLayer::Send (Ptr<NetDevice> device, Ptr<QueueDiscItem> item)
       // selected for the packet and try to dequeue packets from such queue disc
       item->SetTxQueueIndex (txq);
 
+      if(ndi->second.m_queueDiscsToWake.size() == 0){
+        DoInitialize();
+      }
+ 
       Ptr<QueueDisc> qDisc = ndi->second.m_queueDiscsToWake[txq];
       NS_ASSERT (qDisc);
       qDisc->Enqueue (item);

@@ -445,8 +445,7 @@ QKDHelper::InstallOverlayQKD(
     uint32_t                Mcurrent,       //Buffer details
     const std::string       typeId         //Protocol which is used in the underlying network for connection
 )
-{        
-
+{
     //################################
     //  OVERLAY NETWORK
     //################################
@@ -480,7 +479,8 @@ QKDHelper::InstallOverlayQKD(
     if( a->GetObject<VirtualUdpL4Protocol> () == 0){ 
         CreateAndAggregateObjectFromTypeId (a, "ns3::VirtualUdpL4Protocol"); 
         a->AggregateObject (m_tcpFactory.Create<Object> ()); 
-    } 
+    }
+
     NS_ASSERT (a->GetObject<VirtualIpv4L3Protocol> () != 0);
 
 
@@ -504,8 +504,7 @@ QKDHelper::InstallOverlayQKD(
     Ptr<Ipv4> ipv4a = a->GetObject<Ipv4L3Protocol> ();
     uint32_t interfaceOfClassicalDeviceOnNodeA = ipv4a->GetInterfaceForDevice(IPa);
     Ipv4InterfaceAddress netA = ipv4a->GetAddress (interfaceOfClassicalDeviceOnNodeA, 0);
- 
- 
+
  
     /////////////////////////////////
     //          NODE B
@@ -555,6 +554,31 @@ QKDHelper::InstallOverlayQKD(
     Ptr<Socket> m_socketA_sink;
     Ptr<Socket> m_socketB_sink;
 
+
+    /////////////////////////////////
+    // QKD Traffic Control  - queues on QKD Netdevices (L2)
+    // Optional usage, that is the reason why the length of the queue is only 1
+    /////////////////////////////////
+    
+    //TCH for net devices on overlay L2
+    NetDeviceContainer qkdNetDevices;
+    qkdNetDevices.Add(devA);
+    qkdNetDevices.Add(devB);
+     
+    //TCH for net devices on underlay L2
+    NetDeviceContainer UnderlayNetDevices;
+    UnderlayNetDevices.Add(IPa);
+    UnderlayNetDevices.Add(IPb);
+
+    TrafficControlHelper tchUnderlay;
+    tchUnderlay.Uninstall(UnderlayNetDevices);
+    uint16_t handleUnderlay = tchUnderlay.SetRootQueueDisc ("ns3::QKDL2PfifoFastQueueDisc");
+    tchUnderlay.AddInternalQueues (handleUnderlay, 3, "ns3::DropTailQueue<QueueDiscItem>", "MaxSize", StringValue ("1000p"));
+    //tchUnderlay.AddPacketFilter (handleUnderlay, "ns3::PfifoFastIpv4PacketFilter");
+    QueueDiscContainer qdiscsUnderlay = tchUnderlay.Install (UnderlayNetDevices);  
+    
+
+
     /*
         In NS3, TCP is not bidirectional. Therefore, we need to create separate sockets for listening and sending
     */
@@ -562,7 +586,7 @@ QKDHelper::InstallOverlayQKD(
 
         Address inetAddrA (InetSocketAddress (ipv4a->GetAddress (interfaceOfClassicalDeviceOnNodeA, 0).GetLocal (), m_portOverlayNumber) ); 
         Address inetAddrB (InetSocketAddress (ipv4b->GetAddress (interfaceOfClassicalDeviceOnNodeB, 0).GetLocal (), m_portOverlayNumber) );
-
+        
         // SINK SOCKETS
      
         //create TCP Sink socket on A
@@ -630,28 +654,6 @@ QKDHelper::InstallOverlayQKD(
         m_socketB_sink = m_socketB;
     }
 
-    /////////////////////////////////
-    // QKD Traffic Control  - queues on QKD Netdevices (L2)
-    // Optional usage, that is the reason why the length of the queue is only 1
-    /////////////////////////////////
-    
-    //TCH for net devices on overlay L2
-    NetDeviceContainer qkdNetDevices;
-    qkdNetDevices.Add(devA);
-    qkdNetDevices.Add(devB);
-     
-    //TCH for net devices on underlay L2
-    NetDeviceContainer UnderlayNetDevices;
-    UnderlayNetDevices.Add(IPa);
-    UnderlayNetDevices.Add(IPb);
-
-    TrafficControlHelper tchUnderlay;
-    tchUnderlay.Uninstall(UnderlayNetDevices);
-    uint16_t handleUnderlay = tchUnderlay.SetRootQueueDisc ("ns3::QKDL2PfifoFastQueueDisc");
-    tchUnderlay.AddInternalQueues (handleUnderlay, 3, "ns3::DropTailQueue<QueueDiscItem>", "MaxSize", StringValue ("1000p"));
-    //tchUnderlay.AddPacketFilter (handleUnderlay, "ns3::PfifoFastIpv4PacketFilter");
-    QueueDiscContainer qdiscsUnderlay = tchUnderlay.Install (UnderlayNetDevices);    
-    
     /////////////////////////////////
     // UDP AND TCP SetDownTarget to QKD Priority Queues which sit between L3 and L4
     /////////////////////////////////
