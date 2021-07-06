@@ -1,22 +1,24 @@
-# project ns (3-dev) configured on Sat Jul 14 13:57:25 2018 by
-# waf 1.8.19 (abi 98, python 2070cf0 on linux2)
+# project ns (3-dev) configured on Sat Jul  3 10:41:36 2021 by
+# waf 1.8.19 (abi 98, python 20712f0 on linux2)
 # using ./waf configure
 #
 ----------------------------------------
 Setting top to
-/home/miralem/ns3/ns-3-dev
+/home/nck/Documents/qkdnetsim-dev
 ----------------------------------------
 Setting out to
-/home/miralem/ns3/ns-3-dev/build
+/home/nck/Documents/qkdnetsim-dev/build
 ----------------------------------------
 Checking for 'gcc' (C compiler)
-find program=['gcc', 'cc'] paths=['/root/.nvm/versions/node/v8.9.3/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games'] var='CC' -> ['/usr/bin/gcc']
+find program=['gcc', 'cc'] paths=['/home/nck/anaconda3/condabin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='CC' -> ['/usr/bin/gcc']
 ['/usr/bin/gcc', '-dM', '-E', '-']
 out: #define __SSP_STRONG__ 3
 #define __DBL_MIN_EXP__ (-1021)
+#define __FLT32X_MAX_EXP__ 1024
 #define __UINT_LEAST16_MAX__ 0xffff
 #define __ATOMIC_ACQUIRE 2
-#define __FLT_MIN__ 1.17549435082228750797e-38F
+#define __FLT128_MAX_10_EXP__ 4932
+#define __FLT_MIN__ 1.17549435082228750796873653722224568e-38F
 #define __GCC_IEC_559_COMPLEX 2
 #define __UINT_LEAST8_TYPE__ unsigned char
 #define __SIZEOF_FLOAT80__ 16
@@ -24,18 +26,22 @@ out: #define __SSP_STRONG__ 3
 #define __CHAR_BIT__ 8
 #define __UINT8_MAX__ 0xff
 #define __WINT_MAX__ 0xffffffffU
+#define __FLT32_MIN_EXP__ (-125)
 #define __ORDER_LITTLE_ENDIAN__ 1234
 #define __SIZE_MAX__ 0xffffffffffffffffUL
 #define __WCHAR_MAX__ 0x7fffffff
 #define __GCC_HAVE_SYNC_COMPARE_AND_SWAP_1 1
 #define __GCC_HAVE_SYNC_COMPARE_AND_SWAP_2 1
 #define __GCC_HAVE_SYNC_COMPARE_AND_SWAP_4 1
-#define __DBL_DENORM_MIN__ ((double)4.94065645841246544177e-324L)
+#define __DBL_DENORM_MIN__ ((double)4.94065645841246544176568792868221372e-324L)
 #define __GCC_HAVE_SYNC_COMPARE_AND_SWAP_8 1
 #define __GCC_ATOMIC_CHAR_LOCK_FREE 2
 #define __GCC_IEC_559 2
+#define __FLT32X_DECIMAL_DIG__ 17
 #define __FLT_EVAL_METHOD__ 0
 #define __unix__ 1
+#define __FLT64_DECIMAL_DIG__ 17
+#define __CET__ 3
 #define __GCC_ATOMIC_CHAR32_T_LOCK_FREE 2
 #define __x86_64 1
 #define __UINT_FAST64_MAX__ 0xffffffffffffffffUL
@@ -43,142 +49,208 @@ out: #define __SSP_STRONG__ 3
 #define __DBL_MIN_10_EXP__ (-307)
 #define __FINITE_MATH_ONLY__ 0
 #define __GNUC_PATCHLEVEL__ 0
+#define __FLT32_HAS_DENORM__ 1
 #define __UINT_FAST8_MAX__ 0xff
 #define __has_include(STR) __has_include__(STR)
 #define __DEC64_MAX_EXP__ 385
 #define __INT8_C(c) c
+#define __INT_LEAST8_WIDTH__ 8
 #define __UINT_LEAST64_MAX__ 0xffffffffffffffffUL
 #define __SHRT_MAX__ 0x7fff
-#define __LDBL_MAX__ 1.18973149535723176502e+4932L
+#define __LDBL_MAX__ 1.18973149535723176502126385303097021e+4932L
+#define __FLT64X_MAX_10_EXP__ 4932
 #define __UINT_LEAST8_MAX__ 0xff
 #define __GCC_ATOMIC_BOOL_LOCK_FREE 2
+#define __FLT128_DENORM_MIN__ 6.47517511943802511092443895822764655e-4966F128
 #define __UINTMAX_TYPE__ long unsigned int
 #define __linux 1
 #define __DEC32_EPSILON__ 1E-6DF
+#define __FLT_EVAL_METHOD_TS_18661_3__ 0
 #define __unix 1
 #define __UINT32_MAX__ 0xffffffffU
 #define __LDBL_MAX_EXP__ 16384
+#define __FLT128_MIN_EXP__ (-16381)
 #define __WINT_MIN__ 0U
 #define __linux__ 1
+#define __FLT128_MIN_10_EXP__ (-4931)
+#define __INT_LEAST16_WIDTH__ 16
 #define __SCHAR_MAX__ 0x7f
+#define __FLT128_MANT_DIG__ 113
 #define __WCHAR_MIN__ (-__WCHAR_MAX__ - 1)
 #define __INT64_C(c) c ## L
 #define __DBL_DIG__ 15
 #define __GCC_ATOMIC_POINTER_LOCK_FREE 2
+#define __FLT64X_MANT_DIG__ 64
 #define __SIZEOF_INT__ 4
 #define __SIZEOF_POINTER__ 8
 #define __USER_LABEL_PREFIX__ 
+#define __FLT64X_EPSILON__ 1.08420217248550443400745280086994171e-19F64x
 #define __STDC_HOSTED__ 1
 #define __LDBL_HAS_INFINITY__ 1
-#define __FLT_EPSILON__ 1.19209289550781250000e-7F
-#define __LDBL_MIN__ 3.36210314311209350626e-4932L
+#define __FLT32_DIG__ 6
+#define __FLT_EPSILON__ 1.19209289550781250000000000000000000e-7F
+#define __SHRT_WIDTH__ 16
+#define __LDBL_MIN__ 3.36210314311209350626267781732175260e-4932L
 #define __STDC_UTF_16__ 1
 #define __DEC32_MAX__ 9.999999E96DF
+#define __FLT64X_DENORM_MIN__ 3.64519953188247460252840593361941982e-4951F64x
+#define __FLT32X_HAS_INFINITY__ 1
 #define __INT32_MAX__ 0x7fffffff
+#define __INT_WIDTH__ 32
 #define __SIZEOF_LONG__ 8
 #define __STDC_IEC_559__ 1
-#define __STDC_ISO_10646__ 201505L
+#define __STDC_ISO_10646__ 201706L
 #define __UINT16_C(c) c
+#define __PTRDIFF_WIDTH__ 64
 #define __DECIMAL_DIG__ 21
+#define __FLT64_EPSILON__ 2.22044604925031308084726333618164062e-16F64
 #define __gnu_linux__ 1
+#define __INTMAX_WIDTH__ 64
 #define __has_include_next(STR) __has_include_next__(STR)
+#define __FLT64X_MIN_10_EXP__ (-4931)
 #define __LDBL_HAS_QUIET_NAN__ 1
-#define __GNUC__ 5
+#define __FLT64_MANT_DIG__ 53
+#define __GNUC__ 9
+#define __pie__ 2
 #define __MMX__ 1
 #define __FLT_HAS_DENORM__ 1
 #define __SIZEOF_LONG_DOUBLE__ 16
 #define __BIGGEST_ALIGNMENT__ 16
-#define __DBL_MAX__ ((double)1.79769313486231570815e+308L)
+#define __FLT64_MAX_10_EXP__ 308
+#define __DBL_MAX__ ((double)1.79769313486231570814527423731704357e+308L)
 #define __INT_FAST32_MAX__ 0x7fffffffffffffffL
 #define __DBL_HAS_INFINITY__ 1
+#define __HAVE_SPECULATION_SAFE_VALUE 1
 #define __DEC32_MIN_EXP__ (-94)
+#define __INTPTR_WIDTH__ 64
+#define __FLT32X_HAS_DENORM__ 1
 #define __INT_FAST16_TYPE__ long int
 #define __LDBL_HAS_DENORM__ 1
+#define __FLT128_HAS_INFINITY__ 1
 #define __DEC128_MAX__ 9.999999999999999999999999999999999E6144DL
 #define __INT_LEAST32_MAX__ 0x7fffffff
 #define __DEC32_MIN__ 1E-95DF
 #define __DBL_MAX_EXP__ 1024
+#define __WCHAR_WIDTH__ 32
+#define __FLT32_MAX__ 3.40282346638528859811704183484516925e+38F32
 #define __DEC128_EPSILON__ 1E-33DL
 #define __SSE2_MATH__ 1
 #define __ATOMIC_HLE_RELEASE 131072
 #define __PTRDIFF_MAX__ 0x7fffffffffffffffL
 #define __amd64 1
-#define __STDC_NO_THREADS__ 1
 #define __ATOMIC_HLE_ACQUIRE 65536
+#define __FLT32_HAS_QUIET_NAN__ 1
 #define __LONG_LONG_MAX__ 0x7fffffffffffffffLL
 #define __SIZEOF_SIZE_T__ 8
+#define __FLT64X_MIN_EXP__ (-16381)
 #define __SIZEOF_WINT_T__ 4
+#define __LONG_LONG_WIDTH__ 64
+#define __FLT32_MAX_EXP__ 128
 #define __GCC_HAVE_DWARF2_CFI_ASM 1
-#define __GXX_ABI_VERSION 1009
+#define __GXX_ABI_VERSION 1013
 #define __FLT_MIN_EXP__ (-125)
+#define __FLT64X_HAS_QUIET_NAN__ 1
 #define __INT_FAST64_TYPE__ long int
-#define __DBL_MIN__ ((double)2.22507385850720138309e-308L)
+#define __FLT64_DENORM_MIN__ 4.94065645841246544176568792868221372e-324F64
+#define __DBL_MIN__ ((double)2.22507385850720138309023271733240406e-308L)
+#define __PIE__ 2
 #define __LP64__ 1
+#define __FLT32X_EPSILON__ 2.22044604925031308084726333618164062e-16F32x
 #define __DECIMAL_BID_FORMAT__ 1
+#define __FLT64_MIN_EXP__ (-1021)
+#define __FLT64_MIN_10_EXP__ (-307)
+#define __FLT64X_DECIMAL_DIG__ 21
 #define __DEC128_MIN__ 1E-6143DL
 #define __REGISTER_PREFIX__ 
 #define __UINT16_MAX__ 0xffff
 #define __DBL_HAS_DENORM__ 1
+#define __FLT32_MIN__ 1.17549435082228750796873653722224568e-38F32
 #define __UINT8_TYPE__ unsigned char
 #define __NO_INLINE__ 1
 #define __FLT_MANT_DIG__ 24
-#define __VERSION__ "5.4.0 20160609"
+#define __LDBL_DECIMAL_DIG__ 21
+#define __VERSION__ "9.3.0"
 #define __UINT64_C(c) c ## UL
 #define _STDC_PREDEF_H 1
 #define __GCC_ATOMIC_INT_LOCK_FREE 2
+#define __FLT128_MAX_EXP__ 16384
+#define __FLT32_MANT_DIG__ 24
 #define __FLOAT_WORD_ORDER__ __ORDER_LITTLE_ENDIAN__
 #define __STDC_IEC_559_COMPLEX__ 1
+#define __FLT128_HAS_DENORM__ 1
+#define __FLT128_DIG__ 33
+#define __SCHAR_WIDTH__ 8
 #define __INT32_C(c) c
 #define __DEC64_EPSILON__ 1E-15DD
 #define __ORDER_PDP_ENDIAN__ 3412
 #define __DEC128_MIN_EXP__ (-6142)
+#define __FLT32_MAX_10_EXP__ 38
 #define __INT_FAST32_TYPE__ long int
 #define __UINT_LEAST16_TYPE__ short unsigned int
+#define __FLT64X_HAS_INFINITY__ 1
 #define unix 1
 #define __INT16_MAX__ 0x7fff
 #define __SIZE_TYPE__ long unsigned int
 #define __UINT64_MAX__ 0xffffffffffffffffUL
+#define __FLT64X_DIG__ 18
 #define __INT8_TYPE__ signed char
 #define __ELF__ 1
+#define __GCC_ASM_FLAG_OUTPUTS__ 1
 #define __FLT_RADIX__ 2
 #define __INT_LEAST16_TYPE__ short int
-#define __LDBL_EPSILON__ 1.08420217248550443401e-19L
+#define __LDBL_EPSILON__ 1.08420217248550443400745280086994171e-19L
 #define __UINTMAX_C(c) c ## UL
 #define __SSE_MATH__ 1
 #define __k8 1
 #define __SIG_ATOMIC_MAX__ 0x7fffffff
 #define __GCC_ATOMIC_WCHAR_T_LOCK_FREE 2
 #define __SIZEOF_PTRDIFF_T__ 8
+#define __FLT32X_MANT_DIG__ 53
 #define __x86_64__ 1
+#define __FLT32X_MIN_EXP__ (-1021)
 #define __DEC32_SUBNORMAL_MIN__ 0.000001E-95DF
 #define __INT_FAST16_MAX__ 0x7fffffffffffffffL
+#define __FLT64_DIG__ 15
 #define __UINT_FAST32_MAX__ 0xffffffffffffffffUL
 #define __UINT_LEAST64_TYPE__ long unsigned int
 #define __FLT_HAS_QUIET_NAN__ 1
 #define __FLT_MAX_10_EXP__ 38
 #define __LONG_MAX__ 0x7fffffffffffffffL
+#define __FLT64X_HAS_DENORM__ 1
 #define __DEC128_SUBNORMAL_MIN__ 0.000000000000000000000000000000001E-6143DL
 #define __FLT_HAS_INFINITY__ 1
 #define __UINT_FAST16_TYPE__ long unsigned int
 #define __DEC64_MAX__ 9.999999999999999E384DD
+#define __INT_FAST32_WIDTH__ 64
 #define __CHAR16_TYPE__ short unsigned int
 #define __PRAGMA_REDEFINE_EXTNAME 1
+#define __SIZE_WIDTH__ 64
+#define __SEG_FS 1
 #define __INT_LEAST16_MAX__ 0x7fff
 #define __DEC64_MANT_DIG__ 16
 #define __INT64_MAX__ 0x7fffffffffffffffL
 #define __UINT_LEAST32_MAX__ 0xffffffffU
+#define __SEG_GS 1
+#define __FLT32_DENORM_MIN__ 1.40129846432481707092372958328991613e-45F32
 #define __GCC_ATOMIC_LONG_LOCK_FREE 2
+#define __SIG_ATOMIC_WIDTH__ 32
 #define __INT_LEAST64_TYPE__ long int
 #define __INT16_TYPE__ short int
 #define __INT_LEAST8_TYPE__ signed char
-#define __STDC_VERSION__ 201112L
+#define __STDC_VERSION__ 201710L
 #define __DEC32_MAX_EXP__ 97
 #define __INT_FAST8_MAX__ 0x7f
+#define __FLT128_MAX__ 1.18973149535723176508575932662800702e+4932F128
 #define __INTPTR_MAX__ 0x7fffffffffffffffL
 #define linux 1
+#define __FLT64_HAS_QUIET_NAN__ 1
+#define __FLT32_MIN_10_EXP__ (-37)
 #define __SSE2__ 1
+#define __FLT32X_DIG__ 15
 #define __LDBL_MANT_DIG__ 64
 #define __DBL_HAS_QUIET_NAN__ 1
+#define __FLT64_HAS_INFINITY__ 1
+#define __FLT64X_MAX__ 1.18973149535723176502126385303097021e+4932F64x
 #define __SIG_ATOMIC_MIN__ (-__SIG_ATOMIC_MAX__ - 1)
 #define __code_model_small__ 1
 #define __k8__ 1
@@ -186,11 +258,16 @@ out: #define __SSP_STRONG__ 3
 #define __UINT16_TYPE__ short unsigned int
 #define __WCHAR_TYPE__ int
 #define __SIZEOF_FLOAT__ 4
+#define __pic__ 2
 #define __UINTPTR_MAX__ 0xffffffffffffffffUL
+#define __INT_FAST64_WIDTH__ 64
 #define __DEC64_MIN_EXP__ (-382)
+#define __FLT32_DECIMAL_DIG__ 9
 #define __INT_FAST64_MAX__ 0x7fffffffffffffffL
 #define __GCC_ATOMIC_TEST_AND_SET_TRUEVAL 1
 #define __FLT_DIG__ 6
+#define __FLT32_HAS_INFINITY__ 1
+#define __FLT64X_MAX_EXP__ 16384
 #define __UINT_FAST64_TYPE__ long unsigned int
 #define __INT_MAX__ 0x7fffffff
 #define __amd64__ 1
@@ -207,74 +284,99 @@ out: #define __SSP_STRONG__ 3
 #define __SIZEOF_SHORT__ 2
 #define __SSE__ 1
 #define __LDBL_MIN_EXP__ (-16381)
+#define __FLT64_MAX__ 1.79769313486231570814527423731704357e+308F64
+#define __WINT_WIDTH__ 32
 #define __INT_LEAST8_MAX__ 0x7f
+#define __FLT32X_MAX_10_EXP__ 308
 #define __SIZEOF_INT128__ 16
 #define __LDBL_MAX_10_EXP__ 4932
 #define __ATOMIC_RELAXED 0
-#define __DBL_EPSILON__ ((double)2.22044604925031308085e-16L)
+#define __DBL_EPSILON__ ((double)2.22044604925031308084726333618164062e-16L)
+#define __FLT128_MIN__ 3.36210314311209350626267781732175260e-4932F128
 #define _LP64 1
 #define __UINT8_C(c) c
+#define __FLT64_MAX_EXP__ 1024
 #define __INT_LEAST32_TYPE__ int
 #define __SIZEOF_WCHAR_T__ 4
 #define __UINT64_TYPE__ long unsigned int
+#define __FLT128_HAS_QUIET_NAN__ 1
 #define __INT_FAST8_TYPE__ signed char
+#define __FLT64X_MIN__ 3.36210314311209350626267781732175260e-4932F64x
 #define __GNUC_STDC_INLINE__ 1
+#define __FLT64_HAS_DENORM__ 1
+#define __FLT32_EPSILON__ 1.19209289550781250000000000000000000e-7F32
 #define __DBL_DECIMAL_DIG__ 17
 #define __STDC_UTF_32__ 1
+#define __INT_FAST8_WIDTH__ 8
 #define __FXSR__ 1
 #define __DEC_EVAL_METHOD__ 2
+#define __FLT32X_MAX__ 1.79769313486231570814527423731704357e+308F32x
 #define __UINT32_C(c) c ## U
 #define __INTMAX_MAX__ 0x7fffffffffffffffL
 #define __BYTE_ORDER__ __ORDER_LITTLE_ENDIAN__
-#define __FLT_DENORM_MIN__ 1.40129846432481707092e-45F
+#define __FLT_DENORM_MIN__ 1.40129846432481707092372958328991613e-45F
 #define __INT8_MAX__ 0x7f
+#define __LONG_WIDTH__ 64
+#define __PIC__ 2
 #define __UINT_FAST32_TYPE__ long unsigned int
 #define __CHAR32_TYPE__ unsigned int
-#define __FLT_MAX__ 3.40282346638528859812e+38F
+#define __FLT_MAX__ 3.40282346638528859811704183484516925e+38F
 #define __INT32_TYPE__ int
 #define __SIZEOF_DOUBLE__ 8
 #define __FLT_MIN_10_EXP__ (-37)
+#define __FLT64_MIN__ 2.22507385850720138309023271733240406e-308F64
+#define __INT_LEAST32_WIDTH__ 32
 #define __INTMAX_TYPE__ long int
 #define __DEC128_MAX_EXP__ 6145
+#define __FLT32X_HAS_QUIET_NAN__ 1
 #define __ATOMIC_CONSUME 1
-#define __GNUC_MINOR__ 4
+#define __GNUC_MINOR__ 3
+#define __INT_FAST16_WIDTH__ 64
 #define __UINTMAX_MAX__ 0xffffffffffffffffUL
 #define __DEC32_MANT_DIG__ 7
+#define __FLT32X_DENORM_MIN__ 4.94065645841246544176568792868221372e-324F32x
 #define __DBL_MAX_10_EXP__ 308
-#define __LDBL_DENORM_MIN__ 3.64519953188247460253e-4951L
+#define __LDBL_DENORM_MIN__ 3.64519953188247460252840593361941982e-4951L
 #define __INT16_C(c) c
 #define __STDC__ 1
 #define __PTRDIFF_TYPE__ long int
 #define __ATOMIC_SEQ_CST 5
 #define __UINT32_TYPE__ unsigned int
+#define __FLT32X_MIN_10_EXP__ (-307)
 #define __UINTPTR_TYPE__ long unsigned int
 #define __DEC64_SUBNORMAL_MIN__ 0.000000000000001E-383DD
 #define __DEC128_MANT_DIG__ 34
 #define __LDBL_MIN_10_EXP__ (-4931)
+#define __FLT128_EPSILON__ 1.92592994438723585305597794258492732e-34F128
 #define __SIZEOF_LONG_LONG__ 8
+#define __FLT128_DECIMAL_DIG__ 36
 #define __GCC_ATOMIC_LLONG_LOCK_FREE 2
+#define __FLT32X_MIN__ 2.22507385850720138309023271733240406e-308F32x
 #define __LDBL_DIG__ 18
 #define __FLT_DECIMAL_DIG__ 9
 #define __UINT_FAST16_MAX__ 0xffffffffffffffffUL
 #define __GCC_ATOMIC_SHORT_LOCK_FREE 2
+#define __INT_LEAST64_WIDTH__ 64
 #define __UINT_FAST8_TYPE__ unsigned char
 #define __ATOMIC_ACQ_REL 4
 #define __ATOMIC_RELEASE 3
 
-find program=['ar'] paths=['/root/.nvm/versions/node/v8.9.3/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games'] var='AR' -> ['/usr/bin/ar']
+find program=['ar'] paths=['/home/nck/anaconda3/condabin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='AR' -> ['/usr/bin/ar']
 /usr/bin/gcc
 ----------------------------------------
 Checking for cc version
-5.4.0
+9.3.0
 ----------------------------------------
 Checking for 'g++' (C++ compiler)
-find program=['g++', 'c++'] paths=['/root/.nvm/versions/node/v8.9.3/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games'] var='CXX' -> ['/usr/bin/g++']
+find program=['g++', 'c++'] paths=['/home/nck/anaconda3/condabin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='CXX' -> ['/usr/bin/g++']
 ['/usr/bin/g++', '-dM', '-E', '-']
 out: #define __SSP_STRONG__ 3
 #define __DBL_MIN_EXP__ (-1021)
+#define __FLT32X_MAX_EXP__ 1024
 #define __UINT_LEAST16_MAX__ 0xffff
 #define __ATOMIC_ACQUIRE 2
-#define __FLT_MIN__ 1.17549435082228750797e-38F
+#define __FLT128_MAX_10_EXP__ 4932
+#define __FLT_MIN__ 1.17549435082228750796873653722224568e-38F
 #define __GCC_IEC_559_COMPLEX 2
 #define __UINT_LEAST8_TYPE__ unsigned char
 #define __SIZEOF_FLOAT80__ 16
@@ -282,18 +384,22 @@ out: #define __SSP_STRONG__ 3
 #define __CHAR_BIT__ 8
 #define __UINT8_MAX__ 0xff
 #define __WINT_MAX__ 0xffffffffU
+#define __FLT32_MIN_EXP__ (-125)
 #define __ORDER_LITTLE_ENDIAN__ 1234
 #define __SIZE_MAX__ 0xffffffffffffffffUL
 #define __WCHAR_MAX__ 0x7fffffff
 #define __GCC_HAVE_SYNC_COMPARE_AND_SWAP_1 1
 #define __GCC_HAVE_SYNC_COMPARE_AND_SWAP_2 1
 #define __GCC_HAVE_SYNC_COMPARE_AND_SWAP_4 1
-#define __DBL_DENORM_MIN__ ((double)4.94065645841246544177e-324L)
+#define __DBL_DENORM_MIN__ ((double)4.94065645841246544176568792868221372e-324L)
 #define __GCC_HAVE_SYNC_COMPARE_AND_SWAP_8 1
 #define __GCC_ATOMIC_CHAR_LOCK_FREE 2
 #define __GCC_IEC_559 2
+#define __FLT32X_DECIMAL_DIG__ 17
 #define __FLT_EVAL_METHOD__ 0
 #define __unix__ 1
+#define __FLT64_DECIMAL_DIG__ 17
+#define __CET__ 3
 #define __GCC_ATOMIC_CHAR32_T_LOCK_FREE 2
 #define __x86_64 1
 #define __UINT_FAST64_MAX__ 0xffffffffffffffffUL
@@ -301,142 +407,208 @@ out: #define __SSP_STRONG__ 3
 #define __DBL_MIN_10_EXP__ (-307)
 #define __FINITE_MATH_ONLY__ 0
 #define __GNUC_PATCHLEVEL__ 0
+#define __FLT32_HAS_DENORM__ 1
 #define __UINT_FAST8_MAX__ 0xff
 #define __has_include(STR) __has_include__(STR)
 #define __DEC64_MAX_EXP__ 385
 #define __INT8_C(c) c
+#define __INT_LEAST8_WIDTH__ 8
 #define __UINT_LEAST64_MAX__ 0xffffffffffffffffUL
 #define __SHRT_MAX__ 0x7fff
-#define __LDBL_MAX__ 1.18973149535723176502e+4932L
+#define __LDBL_MAX__ 1.18973149535723176502126385303097021e+4932L
+#define __FLT64X_MAX_10_EXP__ 4932
 #define __UINT_LEAST8_MAX__ 0xff
 #define __GCC_ATOMIC_BOOL_LOCK_FREE 2
+#define __FLT128_DENORM_MIN__ 6.47517511943802511092443895822764655e-4966F128
 #define __UINTMAX_TYPE__ long unsigned int
 #define __linux 1
 #define __DEC32_EPSILON__ 1E-6DF
+#define __FLT_EVAL_METHOD_TS_18661_3__ 0
 #define __unix 1
 #define __UINT32_MAX__ 0xffffffffU
 #define __LDBL_MAX_EXP__ 16384
+#define __FLT128_MIN_EXP__ (-16381)
 #define __WINT_MIN__ 0U
 #define __linux__ 1
+#define __FLT128_MIN_10_EXP__ (-4931)
+#define __INT_LEAST16_WIDTH__ 16
 #define __SCHAR_MAX__ 0x7f
+#define __FLT128_MANT_DIG__ 113
 #define __WCHAR_MIN__ (-__WCHAR_MAX__ - 1)
 #define __INT64_C(c) c ## L
 #define __DBL_DIG__ 15
 #define __GCC_ATOMIC_POINTER_LOCK_FREE 2
+#define __FLT64X_MANT_DIG__ 64
 #define __SIZEOF_INT__ 4
 #define __SIZEOF_POINTER__ 8
 #define __USER_LABEL_PREFIX__ 
+#define __FLT64X_EPSILON__ 1.08420217248550443400745280086994171e-19F64x
 #define __STDC_HOSTED__ 1
 #define __LDBL_HAS_INFINITY__ 1
-#define __FLT_EPSILON__ 1.19209289550781250000e-7F
-#define __LDBL_MIN__ 3.36210314311209350626e-4932L
+#define __FLT32_DIG__ 6
+#define __FLT_EPSILON__ 1.19209289550781250000000000000000000e-7F
+#define __SHRT_WIDTH__ 16
+#define __LDBL_MIN__ 3.36210314311209350626267781732175260e-4932L
 #define __STDC_UTF_16__ 1
 #define __DEC32_MAX__ 9.999999E96DF
+#define __FLT64X_DENORM_MIN__ 3.64519953188247460252840593361941982e-4951F64x
+#define __FLT32X_HAS_INFINITY__ 1
 #define __INT32_MAX__ 0x7fffffff
+#define __INT_WIDTH__ 32
 #define __SIZEOF_LONG__ 8
 #define __STDC_IEC_559__ 1
-#define __STDC_ISO_10646__ 201505L
+#define __STDC_ISO_10646__ 201706L
 #define __UINT16_C(c) c
+#define __PTRDIFF_WIDTH__ 64
 #define __DECIMAL_DIG__ 21
+#define __FLT64_EPSILON__ 2.22044604925031308084726333618164062e-16F64
 #define __gnu_linux__ 1
+#define __INTMAX_WIDTH__ 64
 #define __has_include_next(STR) __has_include_next__(STR)
+#define __FLT64X_MIN_10_EXP__ (-4931)
 #define __LDBL_HAS_QUIET_NAN__ 1
-#define __GNUC__ 5
+#define __FLT64_MANT_DIG__ 53
+#define __GNUC__ 9
+#define __pie__ 2
 #define __MMX__ 1
 #define __FLT_HAS_DENORM__ 1
 #define __SIZEOF_LONG_DOUBLE__ 16
 #define __BIGGEST_ALIGNMENT__ 16
-#define __DBL_MAX__ ((double)1.79769313486231570815e+308L)
+#define __FLT64_MAX_10_EXP__ 308
+#define __DBL_MAX__ ((double)1.79769313486231570814527423731704357e+308L)
 #define __INT_FAST32_MAX__ 0x7fffffffffffffffL
 #define __DBL_HAS_INFINITY__ 1
+#define __HAVE_SPECULATION_SAFE_VALUE 1
 #define __DEC32_MIN_EXP__ (-94)
+#define __INTPTR_WIDTH__ 64
+#define __FLT32X_HAS_DENORM__ 1
 #define __INT_FAST16_TYPE__ long int
 #define __LDBL_HAS_DENORM__ 1
+#define __FLT128_HAS_INFINITY__ 1
 #define __DEC128_MAX__ 9.999999999999999999999999999999999E6144DL
 #define __INT_LEAST32_MAX__ 0x7fffffff
 #define __DEC32_MIN__ 1E-95DF
 #define __DBL_MAX_EXP__ 1024
+#define __WCHAR_WIDTH__ 32
+#define __FLT32_MAX__ 3.40282346638528859811704183484516925e+38F32
 #define __DEC128_EPSILON__ 1E-33DL
 #define __SSE2_MATH__ 1
 #define __ATOMIC_HLE_RELEASE 131072
 #define __PTRDIFF_MAX__ 0x7fffffffffffffffL
 #define __amd64 1
-#define __STDC_NO_THREADS__ 1
 #define __ATOMIC_HLE_ACQUIRE 65536
+#define __FLT32_HAS_QUIET_NAN__ 1
 #define __LONG_LONG_MAX__ 0x7fffffffffffffffLL
 #define __SIZEOF_SIZE_T__ 8
+#define __FLT64X_MIN_EXP__ (-16381)
 #define __SIZEOF_WINT_T__ 4
+#define __LONG_LONG_WIDTH__ 64
+#define __FLT32_MAX_EXP__ 128
 #define __GCC_HAVE_DWARF2_CFI_ASM 1
-#define __GXX_ABI_VERSION 1009
+#define __GXX_ABI_VERSION 1013
 #define __FLT_MIN_EXP__ (-125)
+#define __FLT64X_HAS_QUIET_NAN__ 1
 #define __INT_FAST64_TYPE__ long int
-#define __DBL_MIN__ ((double)2.22507385850720138309e-308L)
+#define __FLT64_DENORM_MIN__ 4.94065645841246544176568792868221372e-324F64
+#define __DBL_MIN__ ((double)2.22507385850720138309023271733240406e-308L)
+#define __PIE__ 2
 #define __LP64__ 1
+#define __FLT32X_EPSILON__ 2.22044604925031308084726333618164062e-16F32x
 #define __DECIMAL_BID_FORMAT__ 1
+#define __FLT64_MIN_EXP__ (-1021)
+#define __FLT64_MIN_10_EXP__ (-307)
+#define __FLT64X_DECIMAL_DIG__ 21
 #define __DEC128_MIN__ 1E-6143DL
 #define __REGISTER_PREFIX__ 
 #define __UINT16_MAX__ 0xffff
 #define __DBL_HAS_DENORM__ 1
+#define __FLT32_MIN__ 1.17549435082228750796873653722224568e-38F32
 #define __UINT8_TYPE__ unsigned char
 #define __NO_INLINE__ 1
 #define __FLT_MANT_DIG__ 24
-#define __VERSION__ "5.4.0 20160609"
+#define __LDBL_DECIMAL_DIG__ 21
+#define __VERSION__ "9.3.0"
 #define __UINT64_C(c) c ## UL
 #define _STDC_PREDEF_H 1
 #define __GCC_ATOMIC_INT_LOCK_FREE 2
+#define __FLT128_MAX_EXP__ 16384
+#define __FLT32_MANT_DIG__ 24
 #define __FLOAT_WORD_ORDER__ __ORDER_LITTLE_ENDIAN__
 #define __STDC_IEC_559_COMPLEX__ 1
+#define __FLT128_HAS_DENORM__ 1
+#define __FLT128_DIG__ 33
+#define __SCHAR_WIDTH__ 8
 #define __INT32_C(c) c
 #define __DEC64_EPSILON__ 1E-15DD
 #define __ORDER_PDP_ENDIAN__ 3412
 #define __DEC128_MIN_EXP__ (-6142)
+#define __FLT32_MAX_10_EXP__ 38
 #define __INT_FAST32_TYPE__ long int
 #define __UINT_LEAST16_TYPE__ short unsigned int
+#define __FLT64X_HAS_INFINITY__ 1
 #define unix 1
 #define __INT16_MAX__ 0x7fff
 #define __SIZE_TYPE__ long unsigned int
 #define __UINT64_MAX__ 0xffffffffffffffffUL
+#define __FLT64X_DIG__ 18
 #define __INT8_TYPE__ signed char
 #define __ELF__ 1
+#define __GCC_ASM_FLAG_OUTPUTS__ 1
 #define __FLT_RADIX__ 2
 #define __INT_LEAST16_TYPE__ short int
-#define __LDBL_EPSILON__ 1.08420217248550443401e-19L
+#define __LDBL_EPSILON__ 1.08420217248550443400745280086994171e-19L
 #define __UINTMAX_C(c) c ## UL
 #define __SSE_MATH__ 1
 #define __k8 1
 #define __SIG_ATOMIC_MAX__ 0x7fffffff
 #define __GCC_ATOMIC_WCHAR_T_LOCK_FREE 2
 #define __SIZEOF_PTRDIFF_T__ 8
+#define __FLT32X_MANT_DIG__ 53
 #define __x86_64__ 1
+#define __FLT32X_MIN_EXP__ (-1021)
 #define __DEC32_SUBNORMAL_MIN__ 0.000001E-95DF
 #define __INT_FAST16_MAX__ 0x7fffffffffffffffL
+#define __FLT64_DIG__ 15
 #define __UINT_FAST32_MAX__ 0xffffffffffffffffUL
 #define __UINT_LEAST64_TYPE__ long unsigned int
 #define __FLT_HAS_QUIET_NAN__ 1
 #define __FLT_MAX_10_EXP__ 38
 #define __LONG_MAX__ 0x7fffffffffffffffL
+#define __FLT64X_HAS_DENORM__ 1
 #define __DEC128_SUBNORMAL_MIN__ 0.000000000000000000000000000000001E-6143DL
 #define __FLT_HAS_INFINITY__ 1
 #define __UINT_FAST16_TYPE__ long unsigned int
 #define __DEC64_MAX__ 9.999999999999999E384DD
+#define __INT_FAST32_WIDTH__ 64
 #define __CHAR16_TYPE__ short unsigned int
 #define __PRAGMA_REDEFINE_EXTNAME 1
+#define __SIZE_WIDTH__ 64
+#define __SEG_FS 1
 #define __INT_LEAST16_MAX__ 0x7fff
 #define __DEC64_MANT_DIG__ 16
 #define __INT64_MAX__ 0x7fffffffffffffffL
 #define __UINT_LEAST32_MAX__ 0xffffffffU
+#define __SEG_GS 1
+#define __FLT32_DENORM_MIN__ 1.40129846432481707092372958328991613e-45F32
 #define __GCC_ATOMIC_LONG_LOCK_FREE 2
+#define __SIG_ATOMIC_WIDTH__ 32
 #define __INT_LEAST64_TYPE__ long int
 #define __INT16_TYPE__ short int
 #define __INT_LEAST8_TYPE__ signed char
-#define __STDC_VERSION__ 201112L
+#define __STDC_VERSION__ 201710L
 #define __DEC32_MAX_EXP__ 97
 #define __INT_FAST8_MAX__ 0x7f
+#define __FLT128_MAX__ 1.18973149535723176508575932662800702e+4932F128
 #define __INTPTR_MAX__ 0x7fffffffffffffffL
 #define linux 1
+#define __FLT64_HAS_QUIET_NAN__ 1
+#define __FLT32_MIN_10_EXP__ (-37)
 #define __SSE2__ 1
+#define __FLT32X_DIG__ 15
 #define __LDBL_MANT_DIG__ 64
 #define __DBL_HAS_QUIET_NAN__ 1
+#define __FLT64_HAS_INFINITY__ 1
+#define __FLT64X_MAX__ 1.18973149535723176502126385303097021e+4932F64x
 #define __SIG_ATOMIC_MIN__ (-__SIG_ATOMIC_MAX__ - 1)
 #define __code_model_small__ 1
 #define __k8__ 1
@@ -444,11 +616,16 @@ out: #define __SSP_STRONG__ 3
 #define __UINT16_TYPE__ short unsigned int
 #define __WCHAR_TYPE__ int
 #define __SIZEOF_FLOAT__ 4
+#define __pic__ 2
 #define __UINTPTR_MAX__ 0xffffffffffffffffUL
+#define __INT_FAST64_WIDTH__ 64
 #define __DEC64_MIN_EXP__ (-382)
+#define __FLT32_DECIMAL_DIG__ 9
 #define __INT_FAST64_MAX__ 0x7fffffffffffffffL
 #define __GCC_ATOMIC_TEST_AND_SET_TRUEVAL 1
 #define __FLT_DIG__ 6
+#define __FLT32_HAS_INFINITY__ 1
+#define __FLT64X_MAX_EXP__ 16384
 #define __UINT_FAST64_TYPE__ long unsigned int
 #define __INT_MAX__ 0x7fffffff
 #define __amd64__ 1
@@ -465,56 +642,79 @@ out: #define __SSP_STRONG__ 3
 #define __SIZEOF_SHORT__ 2
 #define __SSE__ 1
 #define __LDBL_MIN_EXP__ (-16381)
+#define __FLT64_MAX__ 1.79769313486231570814527423731704357e+308F64
+#define __WINT_WIDTH__ 32
 #define __INT_LEAST8_MAX__ 0x7f
+#define __FLT32X_MAX_10_EXP__ 308
 #define __SIZEOF_INT128__ 16
 #define __LDBL_MAX_10_EXP__ 4932
 #define __ATOMIC_RELAXED 0
-#define __DBL_EPSILON__ ((double)2.22044604925031308085e-16L)
+#define __DBL_EPSILON__ ((double)2.22044604925031308084726333618164062e-16L)
+#define __FLT128_MIN__ 3.36210314311209350626267781732175260e-4932F128
 #define _LP64 1
 #define __UINT8_C(c) c
+#define __FLT64_MAX_EXP__ 1024
 #define __INT_LEAST32_TYPE__ int
 #define __SIZEOF_WCHAR_T__ 4
 #define __UINT64_TYPE__ long unsigned int
+#define __FLT128_HAS_QUIET_NAN__ 1
 #define __INT_FAST8_TYPE__ signed char
+#define __FLT64X_MIN__ 3.36210314311209350626267781732175260e-4932F64x
 #define __GNUC_STDC_INLINE__ 1
+#define __FLT64_HAS_DENORM__ 1
+#define __FLT32_EPSILON__ 1.19209289550781250000000000000000000e-7F32
 #define __DBL_DECIMAL_DIG__ 17
 #define __STDC_UTF_32__ 1
+#define __INT_FAST8_WIDTH__ 8
 #define __FXSR__ 1
 #define __DEC_EVAL_METHOD__ 2
+#define __FLT32X_MAX__ 1.79769313486231570814527423731704357e+308F32x
 #define __UINT32_C(c) c ## U
 #define __INTMAX_MAX__ 0x7fffffffffffffffL
 #define __BYTE_ORDER__ __ORDER_LITTLE_ENDIAN__
-#define __FLT_DENORM_MIN__ 1.40129846432481707092e-45F
+#define __FLT_DENORM_MIN__ 1.40129846432481707092372958328991613e-45F
 #define __INT8_MAX__ 0x7f
+#define __LONG_WIDTH__ 64
+#define __PIC__ 2
 #define __UINT_FAST32_TYPE__ long unsigned int
 #define __CHAR32_TYPE__ unsigned int
-#define __FLT_MAX__ 3.40282346638528859812e+38F
+#define __FLT_MAX__ 3.40282346638528859811704183484516925e+38F
 #define __INT32_TYPE__ int
 #define __SIZEOF_DOUBLE__ 8
 #define __FLT_MIN_10_EXP__ (-37)
+#define __FLT64_MIN__ 2.22507385850720138309023271733240406e-308F64
+#define __INT_LEAST32_WIDTH__ 32
 #define __INTMAX_TYPE__ long int
 #define __DEC128_MAX_EXP__ 6145
+#define __FLT32X_HAS_QUIET_NAN__ 1
 #define __ATOMIC_CONSUME 1
-#define __GNUC_MINOR__ 4
+#define __GNUC_MINOR__ 3
+#define __INT_FAST16_WIDTH__ 64
 #define __UINTMAX_MAX__ 0xffffffffffffffffUL
 #define __DEC32_MANT_DIG__ 7
+#define __FLT32X_DENORM_MIN__ 4.94065645841246544176568792868221372e-324F32x
 #define __DBL_MAX_10_EXP__ 308
-#define __LDBL_DENORM_MIN__ 3.64519953188247460253e-4951L
+#define __LDBL_DENORM_MIN__ 3.64519953188247460252840593361941982e-4951L
 #define __INT16_C(c) c
 #define __STDC__ 1
 #define __PTRDIFF_TYPE__ long int
 #define __ATOMIC_SEQ_CST 5
 #define __UINT32_TYPE__ unsigned int
+#define __FLT32X_MIN_10_EXP__ (-307)
 #define __UINTPTR_TYPE__ long unsigned int
 #define __DEC64_SUBNORMAL_MIN__ 0.000000000000001E-383DD
 #define __DEC128_MANT_DIG__ 34
 #define __LDBL_MIN_10_EXP__ (-4931)
+#define __FLT128_EPSILON__ 1.92592994438723585305597794258492732e-34F128
 #define __SIZEOF_LONG_LONG__ 8
+#define __FLT128_DECIMAL_DIG__ 36
 #define __GCC_ATOMIC_LLONG_LOCK_FREE 2
+#define __FLT32X_MIN__ 2.22507385850720138309023271733240406e-308F32x
 #define __LDBL_DIG__ 18
 #define __FLT_DECIMAL_DIG__ 9
 #define __UINT_FAST16_MAX__ 0xffffffffffffffffUL
 #define __GCC_ATOMIC_SHORT_LOCK_FREE 2
+#define __INT_LEAST64_WIDTH__ 64
 #define __UINT_FAST8_TYPE__ unsigned char
 #define __ATOMIC_ACQ_REL 4
 #define __ATOMIC_RELEASE 3
@@ -531,35 +731,35 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_310babc02a95c6a5621f6a4dd33a9b40/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_c048097e8dc1bba768189f7b84940237/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '../test.cpp', '-c', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_310babc02a95c6a5621f6a4dd33a9b40/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_310babc02a95c6a5621f6a4dd33a9b40/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '../test.cpp', '-c', '-o', '/home/nck/Documents/qkdnetsim-dev/build/.conf_check_c048097e8dc1bba768189f7b84940237/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_c048097e8dc1bba768189f7b84940237/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_310babc02a95c6a5621f6a4dd33a9b40/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lcryptopp']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/nck/Documents/qkdnetsim-dev/build/.conf_check_c048097e8dc1bba768189f7b84940237/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lcryptopp']
 yes
 ------------------------------------------------------
 Checking for compilation flag -Wl,--soname=foo support
 ==>
 int main() { return 0; }
 <==
-[1/1] Compiling [32mbuild/.conf_check_0ee9ec71bd8b6a1e1b691719861cc87a/test.cpp[0m
+[1/1] Compiling [32mbuild/.conf_check_bfcbbaa1a50fdd0dfcb9f5a6f431263b/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-Wl,--soname=foo', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_0ee9ec71bd8b6a1e1b691719861cc87a/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-Wl,--soname=foo', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', '/home/nck/Documents/qkdnetsim-dev/build/.conf_check_bfcbbaa1a50fdd0dfcb9f5a6f431263b/testbuild/test.cpp.1.o']
 ok
 ------------------------------------------------------
 Checking for compilation flag -std=c++11 support
 ==>
 int main() { return 0; }
 <==
-[1/1] Compiling [32mbuild/.conf_check_0ee9ec71bd8b6a1e1b691719861cc87a/test.cpp[0m
+[1/1] Compiling [32mbuild/.conf_check_bfcbbaa1a50fdd0dfcb9f5a6f431263b/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_0ee9ec71bd8b6a1e1b691719861cc87a/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', '/home/nck/Documents/qkdnetsim-dev/build/.conf_check_bfcbbaa1a50fdd0dfcb9f5a6f431263b/testbuild/test.cpp.1.o']
 ok
 ------------------------------------------------------
 Checking for program 'python'
 /usr/bin/python
-find program=['python'] paths=['/root/.nvm/versions/node/v8.9.3/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games'] var='PYTHON' -> ['/usr/bin/python']
+find program=['python'] paths=['/home/nck/anaconda3/condabin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='PYTHON' -> ['/usr/bin/python']
 ['/usr/bin/python', '-c', 'import imp;print(imp.get_tag())']
 err: Traceback (most recent call last):
   File "<string>", line 1, in <module>
@@ -568,7 +768,7 @@ AttributeError: 'module' object has no attribute 'get_tag'
 ['/usr/bin/python', '-c', 'import sys\nfor x in sys.version_info: print(str(x))']
 out: 2
 7
-12
+18
 final
 0
 
@@ -584,7 +784,7 @@ out: '/usr/local/lib/python2.7/dist-packages'
 
 ------------------------------------------------------
 Checking for python version
-(2, 7, 12, 'final', 0)
+(2, 7, 18, 'final', 0)
 ['/usr/bin/python', '-c', "from distutils.sysconfig import get_config_var, get_python_lib\n\nprint(repr(get_config_var('prefix') or ''))\nprint(repr(get_config_var('SO') or ''))\nprint(repr(get_config_var('LDFLAGS') or ''))\nprint(repr(get_config_var('LIBDIR') or ''))\nprint(repr(get_config_var('LIBPL') or ''))\nprint(repr(get_config_var('INCLUDEPY') or ''))\nprint(repr(get_config_var('Py_ENABLE_SHARED') or ''))\nprint(repr(get_config_var('MACOSX_DEPLOYMENT_TARGET') or ''))\nprint(repr(get_config_var('LDSHARED') or ''))\nprint(repr(get_config_var('CFLAGS') or ''))\nprint(repr(get_config_var('LDVERSION') or ''))"]
 out: '/usr'
 '.so'
@@ -594,8 +794,8 @@ out: '/usr'
 '/usr/include/python2.7'
 1
 ''
-'x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -Wdate-time -D_FORTIFY_SOURCE=2 -g -fstack-protector-strong -Wformat -Werror=format-security  '
-'-fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -Wdate-time -D_FORTIFY_SOURCE=2 -g -fstack-protector-strong -Wformat -Werror=format-security  '
+'x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -Wdate-time -D_FORTIFY_SOURCE=2 -g -fdebug-prefix-map=/build/python2.7-QDqKfA/python2.7-2.7.18=. -fstack-protector-strong -Wformat -Werror=format-security  '
+'-fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -Wdate-time -D_FORTIFY_SOURCE=2 -g -fdebug-prefix-map=/build/python2.7-QDqKfA/python2.7-2.7.18=. -fstack-protector-strong -Wformat -Werror=format-security  '
 ''
 
 '/usr'
@@ -606,8 +806,8 @@ out: '/usr'
 '/usr/include/python2.7'
 1
 ''
-'x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -Wdate-time -D_FORTIFY_SOURCE=2 -g -fstack-protector-strong -Wformat -Werror=format-security  '
-'-fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -Wdate-time -D_FORTIFY_SOURCE=2 -g -fstack-protector-strong -Wformat -Werror=format-security  '
+'x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -Wdate-time -D_FORTIFY_SOURCE=2 -g -fdebug-prefix-map=/build/python2.7-QDqKfA/python2.7-2.7.18=. -fstack-protector-strong -Wformat -Werror=format-security  '
+'-fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -Wdate-time -D_FORTIFY_SOURCE=2 -g -fdebug-prefix-map=/build/python2.7-QDqKfA/python2.7-2.7.18=. -fstack-protector-strong -Wformat -Werror=format-security  '
 ''
 
 Configuration returned from ['/usr/bin/python']:
@@ -619,18 +819,18 @@ LIBPL = '/usr/lib/python2.7/config-x86_64-linux-gnu'
 INCLUDEPY = '/usr/include/python2.7'
 Py_ENABLE_SHARED = 1
 MACOSX_DEPLOYMENT_TARGET = ''
-LDSHARED = 'x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -Wdate-time -D_FORTIFY_SOURCE=2 -g -fstack-protector-strong -Wformat -Werror=format-security  '
-CFLAGS = '-fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -Wdate-time -D_FORTIFY_SOURCE=2 -g -fstack-protector-strong -Wformat -Werror=format-security  '
+LDSHARED = 'x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -Wdate-time -D_FORTIFY_SOURCE=2 -g -fdebug-prefix-map=/build/python2.7-QDqKfA/python2.7-2.7.18=. -fstack-protector-strong -Wformat -Werror=format-security  '
+CFLAGS = '-fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -Wdate-time -D_FORTIFY_SOURCE=2 -g -fdebug-prefix-map=/build/python2.7-QDqKfA/python2.7-2.7.18=. -fstack-protector-strong -Wformat -Werror=format-security  '
 LDVERSION = ''
 
 ------------------------------------------------------
 python-config
 /usr/bin/python-config
-find program=['/usr/bin/python-config', 'python2.7-config', 'python-config-2.7', 'python2.7m-config'] paths=['/root/.nvm/versions/node/v8.9.3/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games'] var='PYTHON_CONFIG' -> ['/usr/bin/python-config']
+find program=['/usr/bin/python-config', 'python2.7-config', 'python-config-2.7', 'python2.7m-config'] paths=['/home/nck/anaconda3/condabin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='PYTHON_CONFIG' -> ['/usr/bin/python-config']
 ------------------------------------------------------------------
 Asking python-config for pyembed '--cflags --libs --ldflags' flags
 ['/usr/bin/python-config', '--cflags', '--libs', '--ldflags']
-out: -I/usr/include/python2.7 -I/usr/include/x86_64-linux-gnu/python2.7  -fno-strict-aliasing -Wdate-time -D_FORTIFY_SOURCE=2 -g -fstack-protector-strong -Wformat -Werror=format-security  -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes
+out: -I/usr/include/python2.7 -I/usr/include/x86_64-linux-gnu/python2.7  -fno-strict-aliasing -Wdate-time -D_FORTIFY_SOURCE=2 -g -fdebug-prefix-map=/build/python2.7-QDqKfA/python2.7-2.7.18=. -fstack-protector-strong -Wformat -Werror=format-security  -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes
 -lpython2.7 -lpthread -ldl  -lutil -lm 
 -L/usr/lib/python2.7/config-x86_64-linux-gnu -L/usr/lib -lpython2.7 -lpthread -ldl  -lutil -lm  -Xlinker -export-dynamic -Wl,-O1 -Wl,-Bsymbolic-functions
 
@@ -657,17 +857,17 @@ int main(int argc, char **argv)
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_c8d0dd02329059a0d54b56622b2e071d/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_ab8bc06f7104aedf5e33895b2c4bb10e/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-fno-strict-aliasing', '-fstack-protector-strong', '-fwrapv', '-I/usr/include/python2.7', '-I/usr/include/x86_64-linux-gnu/python2.7', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DHAVE_PYEMBED=1', '-D_FORTIFY_SOURCE=2', '-DNDEBUG', '../test.cpp', '-c', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_c8d0dd02329059a0d54b56622b2e071d/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_c8d0dd02329059a0d54b56622b2e071d/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-fno-strict-aliasing', '-fdebug-prefix-map=/build/python2.7-QDqKfA/python2.7-2.7.18=.', '-fstack-protector-strong', '-fwrapv', '-I/usr/include/python2.7', '-I/usr/include/x86_64-linux-gnu/python2.7', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DHAVE_PYEMBED=1', '-D_FORTIFY_SOURCE=2', '-DNDEBUG', '../test.cpp', '-c', '-o', '/home/nck/Documents/qkdnetsim-dev/build/.conf_check_ab8bc06f7104aedf5e33895b2c4bb10e/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_ab8bc06f7104aedf5e33895b2c4bb10e/testbuild/testprog[0m
 
-['/usr/bin/g++', '-Xlinker', '-export-dynamic', '-Wl,-O1', '-Wl,-Bsymbolic-functions', 'test.cpp.1.o', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_c8d0dd02329059a0d54b56622b2e071d/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib/python2.7/config-x86_64-linux-gnu', '-L/usr/lib', '-lpython2.7', '-lpthread', '-ldl', '-lutil', '-lm']
+['/usr/bin/g++', '-Xlinker', '-export-dynamic', '-Wl,-O1', '-Wl,-Bsymbolic-functions', 'test.cpp.1.o', '-o', '/home/nck/Documents/qkdnetsim-dev/build/.conf_check_ab8bc06f7104aedf5e33895b2c4bb10e/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib/python2.7/config-x86_64-linux-gnu', '-L/usr/lib', '-lpython2.7', '-lpthread', '-ldl', '-lutil', '-lm']
 yes
 ------------------------------------------------------------------
 Asking python-config for pyext '--cflags --libs --ldflags' flags
 ['/usr/bin/python-config', '--cflags', '--libs', '--ldflags']
-out: -I/usr/include/python2.7 -I/usr/include/x86_64-linux-gnu/python2.7  -fno-strict-aliasing -Wdate-time -D_FORTIFY_SOURCE=2 -g -fstack-protector-strong -Wformat -Werror=format-security  -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes
+out: -I/usr/include/python2.7 -I/usr/include/x86_64-linux-gnu/python2.7  -fno-strict-aliasing -Wdate-time -D_FORTIFY_SOURCE=2 -g -fdebug-prefix-map=/build/python2.7-QDqKfA/python2.7-2.7.18=. -fstack-protector-strong -Wformat -Werror=format-security  -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes
 -lpython2.7 -lpthread -ldl  -lutil -lm 
 -L/usr/lib/python2.7/config-x86_64-linux-gnu -L/usr/lib -lpython2.7 -lpthread -ldl  -lutil -lm  -Xlinker -export-dynamic -Wl,-O1 -Wl,-Bsymbolic-functions
 
@@ -694,30 +894,30 @@ int main(int argc, char **argv)
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_8f44d6f188852db8c63f580a74bae06f/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_2a41dc31d4b7439abb4fb4275255eb7b/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-fPIC', '-fno-strict-aliasing', '-fstack-protector-strong', '-fwrapv', '-I/usr/include/python2.7', '-I/usr/include/x86_64-linux-gnu/python2.7', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYEXT=1', '-D_FORTIFY_SOURCE=2', '-DNDEBUG', '../test.cpp', '-c', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_8f44d6f188852db8c63f580a74bae06f/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_8f44d6f188852db8c63f580a74bae06f/testbuild/testprog.so[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-fPIC', '-fno-strict-aliasing', '-fdebug-prefix-map=/build/python2.7-QDqKfA/python2.7-2.7.18=.', '-fstack-protector-strong', '-fwrapv', '-I/usr/include/python2.7', '-I/usr/include/x86_64-linux-gnu/python2.7', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYEXT=1', '-D_FORTIFY_SOURCE=2', '-DNDEBUG', '../test.cpp', '-c', '-o', '/home/nck/Documents/qkdnetsim-dev/build/.conf_check_2a41dc31d4b7439abb4fb4275255eb7b/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_2a41dc31d4b7439abb4fb4275255eb7b/testbuild/testprog.so[0m
 
-['/usr/bin/g++', '-shared', '-Xlinker', '-export-dynamic', '-Wl,-O1', '-Wl,-Bsymbolic-functions', 'test.cpp.1.o', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_8f44d6f188852db8c63f580a74bae06f/testbuild/testprog.so', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib/python2.7/config-x86_64-linux-gnu', '-L/usr/lib', '-lpython2.7', '-lpthread', '-ldl', '-lutil', '-lm']
+['/usr/bin/g++', '-shared', '-Xlinker', '-export-dynamic', '-Wl,-O1', '-Wl,-Bsymbolic-functions', 'test.cpp.1.o', '-o', '/home/nck/Documents/qkdnetsim-dev/build/.conf_check_2a41dc31d4b7439abb4fb4275255eb7b/testbuild/testprog.so', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib/python2.7/config-x86_64-linux-gnu', '-L/usr/lib', '-lpython2.7', '-lpthread', '-ldl', '-lutil', '-lm']
 yes
 ------------------------------------------------------------------
 Checking for compilation flag -fvisibility=hidden support
 ==>
 int main() { return 0; }
 <==
-[1/1] Compiling [32mbuild/.conf_check_0ee9ec71bd8b6a1e1b691719861cc87a/test.cpp[0m
+[1/1] Compiling [32mbuild/.conf_check_bfcbbaa1a50fdd0dfcb9f5a6f431263b/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-fvisibility=hidden', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYEXT=1', '-DHAVE_PYTHON_H=1', '../test.cpp', '-c', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_0ee9ec71bd8b6a1e1b691719861cc87a/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-fvisibility=hidden', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYEXT=1', '-DHAVE_PYTHON_H=1', '../test.cpp', '-c', '-o', '/home/nck/Documents/qkdnetsim-dev/build/.conf_check_bfcbbaa1a50fdd0dfcb9f5a6f431263b/testbuild/test.cpp.1.o']
 ok
 ------------------------------------------------------------------
 Checking for compilation flag -Wno-array-bounds support
 ==>
 int main() { return 0; }
 <==
-[1/1] Compiling [32mbuild/.conf_check_0ee9ec71bd8b6a1e1b691719861cc87a/test.cpp[0m
+[1/1] Compiling [32mbuild/.conf_check_bfcbbaa1a50fdd0dfcb9f5a6f431263b/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-array-bounds', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYEXT=1', '-DHAVE_PYTHON_H=1', '../test.cpp', '-c', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_0ee9ec71bd8b6a1e1b691719861cc87a/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-array-bounds', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYEXT=1', '-DHAVE_PYTHON_H=1', '../test.cpp', '-c', '-o', '/home/nck/Documents/qkdnetsim-dev/build/.conf_check_bfcbbaa1a50fdd0dfcb9f5a6f431263b/testbuild/test.cpp.1.o']
 ok
 ------------------------------------------------------------------
 Checking for pybindgen location
@@ -730,192 +930,57 @@ err: Traceback (most recent call last):
 ImportError: No module named pybindgen
 
 not found
-from /home/miralem/ns3/ns-3-dev/bindings/python: Could not find the python module 'pybindgen'
+from /home/nck/Documents/qkdnetsim-dev/bindings/python: Could not find the python module 'pybindgen'
 ------------------------------------------------------------------
 Checking boost includes
-1_58
+1_71
 ------------------------------------------------------------------
 Checking boost libs
 Found the boost path in /usr/lib/x86_64-linux-gnu with the libraries:
-    /usr/lib/x86_64-linux-gnu/libboost_atomic.a
-    /usr/lib/x86_64-linux-gnu/libboost_atomic.so
-    /usr/lib/x86_64-linux-gnu/libboost_atomic.so.1.58.0
-    /usr/lib/x86_64-linux-gnu/libboost_chrono.a
-    /usr/lib/x86_64-linux-gnu/libboost_chrono.so
-    /usr/lib/x86_64-linux-gnu/libboost_chrono.so.1.58.0
-    /usr/lib/x86_64-linux-gnu/libboost_context.a
-    /usr/lib/x86_64-linux-gnu/libboost_context.so
-    /usr/lib/x86_64-linux-gnu/libboost_context.so.1.58.0
-    /usr/lib/x86_64-linux-gnu/libboost_coroutine.a
-    /usr/lib/x86_64-linux-gnu/libboost_coroutine.so
-    /usr/lib/x86_64-linux-gnu/libboost_coroutine.so.1.58.0
-    /usr/lib/x86_64-linux-gnu/libboost_date_time.a
-    /usr/lib/x86_64-linux-gnu/libboost_date_time.so
-    /usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.58.0
-    /usr/lib/x86_64-linux-gnu/libboost_exception.a
-    /usr/lib/x86_64-linux-gnu/libboost_filesystem.a
-    /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
-    /usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.58.0
-    /usr/lib/x86_64-linux-gnu/libboost_graph.a
-    /usr/lib/x86_64-linux-gnu/libboost_graph.so
-    /usr/lib/x86_64-linux-gnu/libboost_graph.so.1.58.0
-    /usr/lib/x86_64-linux-gnu/libboost_graph_parallel.a
-    /usr/lib/x86_64-linux-gnu/libboost_graph_parallel.so
-    /usr/lib/x86_64-linux-gnu/libboost_graph_parallel.so.1.58.0
-    /usr/lib/x86_64-linux-gnu/libboost_iostreams.a
-    /usr/lib/x86_64-linux-gnu/libboost_iostreams.so
-    /usr/lib/x86_64-linux-gnu/libboost_iostreams.so.1.58.0
-    /usr/lib/x86_64-linux-gnu/libboost_locale.a
-    /usr/lib/x86_64-linux-gnu/libboost_locale.so
-    /usr/lib/x86_64-linux-gnu/libboost_locale.so.1.58.0
-    /usr/lib/x86_64-linux-gnu/libboost_log.a
-    /usr/lib/x86_64-linux-gnu/libboost_log.so
-    /usr/lib/x86_64-linux-gnu/libboost_log.so.1.58.0
-    /usr/lib/x86_64-linux-gnu/libboost_log_setup.a
-    /usr/lib/x86_64-linux-gnu/libboost_log_setup.so
-    /usr/lib/x86_64-linux-gnu/libboost_log_setup.so.1.58.0
-    /usr/lib/x86_64-linux-gnu/libboost_math_c99.a
-    /usr/lib/x86_64-linux-gnu/libboost_math_c99.so
-    /usr/lib/x86_64-linux-gnu/libboost_math_c99.so.1.58.0
-    /usr/lib/x86_64-linux-gnu/libboost_math_c99f.a
-    /usr/lib/x86_64-linux-gnu/libboost_math_c99f.so
-    /usr/lib/x86_64-linux-gnu/libboost_math_c99f.so.1.58.0
-    /usr/lib/x86_64-linux-gnu/libboost_math_c99l.a
-    /usr/lib/x86_64-linux-gnu/libboost_math_c99l.so
-    /usr/lib/x86_64-linux-gnu/libboost_math_c99l.so.1.58.0
-    /usr/lib/x86_64-linux-gnu/libboost_math_tr1.a
-    /usr/lib/x86_64-linux-gnu/libboost_math_tr1.so
-    /usr/lib/x86_64-linux-gnu/libboost_math_tr1.so.1.58.0
-    /usr/lib/x86_64-linux-gnu/libboost_math_tr1f.a
-    /usr/lib/x86_64-linux-gnu/libboost_math_tr1f.so
-    /usr/lib/x86_64-linux-gnu/libboost_math_tr1f.so.1.58.0
-    /usr/lib/x86_64-linux-gnu/libboost_math_tr1l.a
-    /usr/lib/x86_64-linux-gnu/libboost_math_tr1l.so
-    /usr/lib/x86_64-linux-gnu/libboost_math_tr1l.so.1.58.0
-    /usr/lib/x86_64-linux-gnu/libboost_mpi.a
-    /usr/lib/x86_64-linux-gnu/libboost_mpi.so
-    /usr/lib/x86_64-linux-gnu/libboost_mpi.so.1.58.0
-    /usr/lib/x86_64-linux-gnu/libboost_prg_exec_monitor.a
-    /usr/lib/x86_64-linux-gnu/libboost_prg_exec_monitor.so
-    /usr/lib/x86_64-linux-gnu/libboost_prg_exec_monitor.so.1.58.0
-    /usr/lib/x86_64-linux-gnu/libboost_program_options.a
-    /usr/lib/x86_64-linux-gnu/libboost_program_options.so
-    /usr/lib/x86_64-linux-gnu/libboost_program_options.so.1.58.0
-    /usr/lib/x86_64-linux-gnu/libboost_python-py27.so.1.58.0
-    /usr/lib/x86_64-linux-gnu/libboost_python-py35.so.1.58.0
-    /usr/lib/x86_64-linux-gnu/libboost_random.a
-    /usr/lib/x86_64-linux-gnu/libboost_random.so
-    /usr/lib/x86_64-linux-gnu/libboost_random.so.1.58.0
-    /usr/lib/x86_64-linux-gnu/libboost_regex.a
-    /usr/lib/x86_64-linux-gnu/libboost_regex.so
-    /usr/lib/x86_64-linux-gnu/libboost_regex.so.1.58.0
-    /usr/lib/x86_64-linux-gnu/libboost_serialization.a
-    /usr/lib/x86_64-linux-gnu/libboost_serialization.so
-    /usr/lib/x86_64-linux-gnu/libboost_serialization.so.1.58.0
-    /usr/lib/x86_64-linux-gnu/libboost_signals.a
-    /usr/lib/x86_64-linux-gnu/libboost_signals.so
-    /usr/lib/x86_64-linux-gnu/libboost_signals.so.1.58.0
-    /usr/lib/x86_64-linux-gnu/libboost_system.a
-    /usr/lib/x86_64-linux-gnu/libboost_system.so
-    /usr/lib/x86_64-linux-gnu/libboost_system.so.1.58.0
-    /usr/lib/x86_64-linux-gnu/libboost_test_exec_monitor.a
-    /usr/lib/x86_64-linux-gnu/libboost_thread.a
-    /usr/lib/x86_64-linux-gnu/libboost_thread.so
-    /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.58.0
-    /usr/lib/x86_64-linux-gnu/libboost_timer.a
-    /usr/lib/x86_64-linux-gnu/libboost_timer.so
-    /usr/lib/x86_64-linux-gnu/libboost_timer.so.1.58.0
-    /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.a
-    /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so
-    /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.58.0
-    /usr/lib/x86_64-linux-gnu/libboost_wave.a
-    /usr/lib/x86_64-linux-gnu/libboost_wave.so
-    /usr/lib/x86_64-linux-gnu/libboost_wave.so.1.58.0
-    /usr/lib/x86_64-linux-gnu/libboost_wserialization.a
-    /usr/lib/x86_64-linux-gnu/libboost_wserialization.so
-    /usr/lib/x86_64-linux-gnu/libboost_wserialization.so.1.58.0
-Trying pattern boost_system(-gcc[0-9]{0,3})-1_58.so$
-Trying pattern boost_system-1_58.so$
+    /usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.71.0
+    /usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.71.0
+    /usr/lib/x86_64-linux-gnu/libboost_iostreams.so.1.71.0
+    /usr/lib/x86_64-linux-gnu/libboost_locale.so.1.71.0
+    /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0
+Trying pattern boost_system(-gcc[0-9]{0,3})-1_71.so$
+Trying pattern boost_system-1_71.so$
 Trying pattern boost_system(-gcc[0-9]{0,3}).so$
 Trying pattern boost_system.so$
-Found boost lib libboost_system.so
-Trying pattern boost_signals(-gcc[0-9]{0,3})-1_58.so$
-Trying pattern boost_signals-1_58.so$
-Trying pattern boost_signals(-gcc[0-9]{0,3}).so$
-Trying pattern boost_signals.so$
-Found boost lib libboost_signals.so
-Trying pattern boost_filesystem(-gcc[0-9]{0,3})-1_58.so$
-Trying pattern boost_filesystem-1_58.so$
-Trying pattern boost_filesystem(-gcc[0-9]{0,3}).so$
-Trying pattern boost_filesystem.so$
-Found boost lib libboost_filesystem.so
-ok
+Trying pattern boost_system.so$
+Trying pattern boost_system
+lib system not found in /usr/lib/x86_64-linux-gnu
+from /home/nck/Documents/qkdnetsim-dev/src: The configuration failed
 ------------------------------------------------------------------
-Checking for boost linkage
-==>
-
-#include <boost/system/error_code.hpp>
-int main() { boost::system::error_code c; }
-
-<==
-[1/2] Compiling [32mbuild/.conf_check_6a1827d53ef08c375cab54d3e53a8bc1/test.cpp[0m
-
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-I/usr/include', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYEXT=1', '-DHAVE_PYTHON_H=1', '../test.cpp', '-c', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_6a1827d53ef08c375cab54d3e53a8bc1/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_6a1827d53ef08c375cab54d3e53a8bc1/testbuild/testprog[0m
-
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_6a1827d53ef08c375cab54d3e53a8bc1/testbuild/testprog', '-Wl,-Bstatic', '-L/usr/lib/x86_64-linux-gnu', '-Wl,-Bdynamic', '-L/usr/lib/x86_64-linux-gnu', '-lboost_system', '-lboost_signals', '-lboost_filesystem']
-ok
+Checking boost includes
+1_71
 ------------------------------------------------------------------
-Checking for BRITE location
-../BRITE (guessed)
-------------------------------------------------------------------
-Checking for library dl
-==>
-
-int main(int argc, char **argv) {
-	(void)argc; (void)argv;
-	return 0;
-}
-
-<==
-[1/2] Compiling [32mbuild/.conf_check_f8a2f2b77cff919ecdda0c8f8e098d12/test.cpp[0m
-
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYEXT=1', '-DHAVE_PYTHON_H=1', '../test.cpp', '-c', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_f8a2f2b77cff919ecdda0c8f8e098d12/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_f8a2f2b77cff919ecdda0c8f8e098d12/testbuild/testprog[0m
-
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_f8a2f2b77cff919ecdda0c8f8e098d12/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-ldl']
-yes
-------------------------------------------------------------------
-Checking for library brite
-==>
-
-#include "Brite.h"
-
-int main()
-{
-  return 0;
-}
-
-<==
-[1/2] Compiling [32mbuild/.conf_check_c2947638b20c9005ddb8f1bd0e77f930/test.cpp[0m
-
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-I/home/miralem/ns3/BRITE', '-I/home/miralem/ns3/BRITE/Models', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYEXT=1', '-DHAVE_PYTHON_H=1', '-DDL=1', '-DNS3_BRITE', '../test.cpp', '-c', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_c2947638b20c9005ddb8f1bd0e77f930/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_c2947638b20c9005ddb8f1bd0e77f930/testbuild/testprog[0m
-
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_c2947638b20c9005ddb8f1bd0e77f930/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/home/miralem/ns3/BRITE', '-L/home/miralem/ns3/BRITE', '-lbrite']
-yes
+Checking boost libs
+Found the boost path in /usr/lib/x86_64-linux-gnu with the libraries:
+    /usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.71.0
+    /usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.71.0
+    /usr/lib/x86_64-linux-gnu/libboost_iostreams.so.1.71.0
+    /usr/lib/x86_64-linux-gnu/libboost_locale.so.1.71.0
+    /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0
+Trying pattern boost_system(-gcc[0-9]{0,3})-1_71.so$
+Trying pattern boost_system-1_71.so$
+Trying pattern boost_system(-gcc[0-9]{0,3}).so$
+Trying pattern boost_system.so$
+Trying pattern boost_system.so$
+Trying pattern boost_system
+lib system not found in /usr/lib/x86_64-linux-gnu
+from /home/nck/Documents/qkdnetsim-dev/src: The configuration failed
 ------------------------------------------------------------------
 Checking for click location
 not found
 ------------------------------------------------------------------
 Checking for program 'pkg-config'
 /usr/bin/pkg-config
-find program=['pkg-config'] paths=['/root/.nvm/versions/node/v8.9.3/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games'] var='PKGCONFIG' -> ['/usr/bin/pkg-config']
+find program=['pkg-config'] paths=['/home/nck/anaconda3/condabin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='PKGCONFIG' -> ['/usr/bin/pkg-config']
 ------------------------------------------------------------------
-Checking for 'gtk+-2.0' >= 2.12
-['/usr/bin/pkg-config', '--atleast-version=2.12', 'gtk+-2.0']
-['/usr/bin/pkg-config', '--cflags', '--libs', 'gtk+-2.0']
-out: -pthread -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0/ -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/libpng12 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng12 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/freetype2 -lgtk-x11-2.0 -lgdk-x11-2.0 -lpangocairo-1.0 -latk-1.0 -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lpangoft2-1.0 -lpango-1.0 -lgobject-2.0 -lglib-2.0 -lfontconfig -lfreetype
+Checking for 'gtk+-3.0' >= 3.0
+['/usr/bin/pkg-config', '--atleast-version=3.0', 'gtk+-3.0']
+['/usr/bin/pkg-config', '--cflags', '--libs', 'gtk+-3.0']
+out: -pthread -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/harfbuzz -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -lharfbuzz -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
 
 yes
 ------------------------------------------------------------------
@@ -926,66 +991,71 @@ out: -I/usr/include/libxml2 -lxml2
 
 yes
 ------------------------------------------------------------------
-Checking for type uint128_t
+checking for uint128_t
 ==>
-#include <stdint.h>
 
-int main(int argc, char **argv) {
+        #include <stdint.h>
+        
+        int main(int argc, char **argv) {
 	(void)argc; (void)argv;
 	if ((uint128_t *) 0) return 0;
 	if (sizeof (uint128_t)) return 0;
 	return 1;
-}
-
+        }
+        
 <==
-[1/2] Compiling [32mbuild/.conf_check_4b2e43cf76a922f800cc37b85c44aa7f/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_b611c716dde92f1a7fad4dd5cdc9fd01/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_4b2e43cf76a922f800cc37b85c44aa7f/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', '/home/nck/Documents/qkdnetsim-dev/build/.conf_check_b611c716dde92f1a7fad4dd5cdc9fd01/testbuild/test.cpp.1.o']
 err: ../test.cpp: In function ‘int main(int, char**)’:
-../test.cpp:5:7: error: ‘uint128_t’ was not declared in this scope
-  if ((uint128_t *) 0) return 0;
-       ^
-../test.cpp:5:18: error: expected primary-expression before ‘)’ token
-  if ((uint128_t *) 0) return 0;
-                  ^
-../test.cpp:5:20: error: expected ‘)’ before numeric constant
-  if ((uint128_t *) 0) return 0;
-                    ^
-../test.cpp:6:14: error: ‘uint128_t’ was not declared in this scope
-  if (sizeof (uint128_t)) return 0;
-              ^
+../test.cpp:6:7: error: ‘uint128_t’ was not declared in this scope; did you mean ‘uint32_t’?
+    6 |  if ((uint128_t *) 0) return 0;
+      |       ^~~~~~~~~
+      |       uint32_t
+../test.cpp:6:18: error: expected primary-expression before ‘)’ token
+    6 |  if ((uint128_t *) 0) return 0;
+      |                  ^
+../test.cpp:6:19: error: expected ‘)’ before numeric constant
+    6 |  if ((uint128_t *) 0) return 0;
+      |     ~             ^~
+      |                   )
+../test.cpp:7:14: error: ‘uint128_t’ was not declared in this scope; did you mean ‘uint32_t’?
+    7 |  if (sizeof (uint128_t)) return 0;
+      |              ^~~~~~~~~
+      |              uint32_t
 
-from /home/miralem/ns3/ns-3-dev/src/core: Test does not build: Traceback (most recent call last):
-  File "/home/miralem/ns3/ns-3-dev/.waf-1.8.19-b1fc8f7baef51bd2db4c2971909a568d/waflib/Configure.py", line 335, in run_build
+from /home/nck/Documents/qkdnetsim-dev/src/core: Test does not build: Traceback (most recent call last):
+  File "/home/nck/Documents/qkdnetsim-dev/.waf-1.8.19-b1fc8f7baef51bd2db4c2971909a568d/waflib/Configure.py", line 335, in run_build
     bld.compile()
-  File "/home/miralem/ns3/ns-3-dev/.waf-1.8.19-b1fc8f7baef51bd2db4c2971909a568d/waflib/Build.py", line 185, in compile
+  File "/home/nck/Documents/qkdnetsim-dev/.waf-1.8.19-b1fc8f7baef51bd2db4c2971909a568d/waflib/Build.py", line 185, in compile
     raise Errors.BuildError(self.producer.error)
 BuildError: Build failed
  -> task in 'testprog' failed (exit status 1): 
-	{task 140540763072080: cxx test.cpp -> test.cpp.1.o}
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_4b2e43cf76a922f800cc37b85c44aa7f/testbuild/test.cpp.1.o']
+	{task 139630296451728: cxx test.cpp -> test.cpp.1.o}
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', '/home/nck/Documents/qkdnetsim-dev/build/.conf_check_b611c716dde92f1a7fad4dd5cdc9fd01/testbuild/test.cpp.1.o']
 
 not found
-from /home/miralem/ns3/ns-3-dev/src/core: The configuration failed
+from /home/nck/Documents/qkdnetsim-dev/src/core: The configuration failed
 ------------------------------------------------------------------
-Checking for type __uint128_t
+checking for __uint128_t
 ==>
-#include <stdint.h>
 
-int main(int argc, char **argv) {
+        #include <stdint.h>
+        
+        int main(int argc, char **argv) {
 	(void)argc; (void)argv;
 	if ((__uint128_t *) 0) return 0;
 	if (sizeof (__uint128_t)) return 0;
 	return 1;
-}
-
+        }
+        
 <==
-[1/2] Compiling [32mbuild/.conf_check_8d3ef86c76cd9c041388fdc8cd22b490/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_7474c31e0258f0bf3192492e210b5114/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_8d3ef86c76cd9c041388fdc8cd22b490/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_8d3ef86c76cd9c041388fdc8cd22b490/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', '/home/nck/Documents/qkdnetsim-dev/build/.conf_check_7474c31e0258f0bf3192492e210b5114/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_7474c31e0258f0bf3192492e210b5114/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_8d3ef86c76cd9c041388fdc8cd22b490/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/nck/Documents/qkdnetsim-dev/build/.conf_check_7474c31e0258f0bf3192492e210b5114/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking high precision implementation
@@ -1001,12 +1071,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_db911021dbc4c06ba3341775a79afeef/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_58af29df78c1294468d8cf81fe843d23/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '../test.cpp', '-c', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_db911021dbc4c06ba3341775a79afeef/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_db911021dbc4c06ba3341775a79afeef/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '../test.cpp', '-c', '-o', '/home/nck/Documents/qkdnetsim-dev/build/.conf_check_58af29df78c1294468d8cf81fe843d23/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_58af29df78c1294468d8cf81fe843d23/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_db911021dbc4c06ba3341775a79afeef/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/nck/Documents/qkdnetsim-dev/build/.conf_check_58af29df78c1294468d8cf81fe843d23/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header inttypes.h
@@ -1019,12 +1089,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_a30a39a77c4a5c96952f5e6cdf3d4ec8/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_1b8ba9af9a4b99c74494daac074c1742/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '../test.cpp', '-c', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_a30a39a77c4a5c96952f5e6cdf3d4ec8/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_a30a39a77c4a5c96952f5e6cdf3d4ec8/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '../test.cpp', '-c', '-o', '/home/nck/Documents/qkdnetsim-dev/build/.conf_check_1b8ba9af9a4b99c74494daac074c1742/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_1b8ba9af9a4b99c74494daac074c1742/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_a30a39a77c4a5c96952f5e6cdf3d4ec8/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/nck/Documents/qkdnetsim-dev/build/.conf_check_1b8ba9af9a4b99c74494daac074c1742/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header sys/inttypes.h
@@ -1037,24 +1107,26 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_ea88bcf554a06d6a1768cbe833ad4233/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_d8d7bf1889d82e80cb795ecb3e129d61/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_ea88bcf554a06d6a1768cbe833ad4233/testbuild/test.cpp.1.o']
-err: ../test.cpp:1:26: fatal error: sys/inttypes.h: No such file or directory
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/nck/Documents/qkdnetsim-dev/build/.conf_check_d8d7bf1889d82e80cb795ecb3e129d61/testbuild/test.cpp.1.o']
+err: ../test.cpp:1:10: fatal error: sys/inttypes.h: No such file or directory
+    1 | #include <sys/inttypes.h>
+      |          ^~~~~~~~~~~~~~~~
 compilation terminated.
 
-from /home/miralem/ns3/ns-3-dev/src/core: Test does not build: Traceback (most recent call last):
-  File "/home/miralem/ns3/ns-3-dev/.waf-1.8.19-b1fc8f7baef51bd2db4c2971909a568d/waflib/Configure.py", line 335, in run_build
+from /home/nck/Documents/qkdnetsim-dev/src/core: Test does not build: Traceback (most recent call last):
+  File "/home/nck/Documents/qkdnetsim-dev/.waf-1.8.19-b1fc8f7baef51bd2db4c2971909a568d/waflib/Configure.py", line 335, in run_build
     bld.compile()
-  File "/home/miralem/ns3/ns-3-dev/.waf-1.8.19-b1fc8f7baef51bd2db4c2971909a568d/waflib/Build.py", line 185, in compile
+  File "/home/nck/Documents/qkdnetsim-dev/.waf-1.8.19-b1fc8f7baef51bd2db4c2971909a568d/waflib/Build.py", line 185, in compile
     raise Errors.BuildError(self.producer.error)
 BuildError: Build failed
  -> task in 'testprog' failed (exit status 1): 
-	{task 140540762257680: cxx test.cpp -> test.cpp.1.o}
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_ea88bcf554a06d6a1768cbe833ad4233/testbuild/test.cpp.1.o']
+	{task 139630296170128: cxx test.cpp -> test.cpp.1.o}
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/nck/Documents/qkdnetsim-dev/build/.conf_check_d8d7bf1889d82e80cb795ecb3e129d61/testbuild/test.cpp.1.o']
 
 not found
-from /home/miralem/ns3/ns-3-dev/src/core: The configuration failed
+from /home/nck/Documents/qkdnetsim-dev/src/core: The configuration failed
 ------------------------------------------------------------------
 Checking for header sys/types.h
 ==>
@@ -1066,12 +1138,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_c545a4ec92e165e09cd03298df5a2daa/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_aefb9440078c27ca487bf0aea2068488/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_c545a4ec92e165e09cd03298df5a2daa/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_c545a4ec92e165e09cd03298df5a2daa/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/nck/Documents/qkdnetsim-dev/build/.conf_check_aefb9440078c27ca487bf0aea2068488/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_aefb9440078c27ca487bf0aea2068488/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_c545a4ec92e165e09cd03298df5a2daa/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/nck/Documents/qkdnetsim-dev/build/.conf_check_aefb9440078c27ca487bf0aea2068488/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header sys/stat.h
@@ -1084,12 +1156,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_3b32224d4bcbdaaa72d1aa8848892831/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_4907989dc9cf7efd8150e34bc1b81fe6/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '../test.cpp', '-c', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_3b32224d4bcbdaaa72d1aa8848892831/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_3b32224d4bcbdaaa72d1aa8848892831/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '../test.cpp', '-c', '-o', '/home/nck/Documents/qkdnetsim-dev/build/.conf_check_4907989dc9cf7efd8150e34bc1b81fe6/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_4907989dc9cf7efd8150e34bc1b81fe6/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_3b32224d4bcbdaaa72d1aa8848892831/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/nck/Documents/qkdnetsim-dev/build/.conf_check_4907989dc9cf7efd8150e34bc1b81fe6/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header dirent.h
@@ -1102,12 +1174,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_34ba520db099eb64869c27240b68970e/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_d5035cd293240ac6a74bed4ebba67339/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '../test.cpp', '-c', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_34ba520db099eb64869c27240b68970e/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_34ba520db099eb64869c27240b68970e/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '../test.cpp', '-c', '-o', '/home/nck/Documents/qkdnetsim-dev/build/.conf_check_d5035cd293240ac6a74bed4ebba67339/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_d5035cd293240ac6a74bed4ebba67339/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_34ba520db099eb64869c27240b68970e/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/nck/Documents/qkdnetsim-dev/build/.conf_check_d5035cd293240ac6a74bed4ebba67339/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header stdlib.h
@@ -1120,12 +1192,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_e26e42b9de82a07f3db1f826ad3124ef/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_8565ecf2e2e2850f3cbe184f99b59c76/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '../test.cpp', '-c', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_e26e42b9de82a07f3db1f826ad3124ef/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_e26e42b9de82a07f3db1f826ad3124ef/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '../test.cpp', '-c', '-o', '/home/nck/Documents/qkdnetsim-dev/build/.conf_check_8565ecf2e2e2850f3cbe184f99b59c76/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_8565ecf2e2e2850f3cbe184f99b59c76/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_e26e42b9de82a07f3db1f826ad3124ef/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/nck/Documents/qkdnetsim-dev/build/.conf_check_8565ecf2e2e2850f3cbe184f99b59c76/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header signal.h
@@ -1138,12 +1210,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_a811d6b9257b2380ee30ec6f61a2e6aa/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_4916b94ec5548ea4391e3d9fc551bbfb/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '../test.cpp', '-c', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_a811d6b9257b2380ee30ec6f61a2e6aa/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_a811d6b9257b2380ee30ec6f61a2e6aa/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '../test.cpp', '-c', '-o', '/home/nck/Documents/qkdnetsim-dev/build/.conf_check_4916b94ec5548ea4391e3d9fc551bbfb/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_4916b94ec5548ea4391e3d9fc551bbfb/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_a811d6b9257b2380ee30ec6f61a2e6aa/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/nck/Documents/qkdnetsim-dev/build/.conf_check_4916b94ec5548ea4391e3d9fc551bbfb/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header pthread.h
@@ -1158,12 +1230,12 @@ int main ()
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_c426a07c6f8a829078211ed90152fb75/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_9154aa09e7d8fab0b9cb1791d5eb1aab/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-pthread', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '../test.cpp', '-c', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_c426a07c6f8a829078211ed90152fb75/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_c426a07c6f8a829078211ed90152fb75/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-pthread', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '../test.cpp', '-c', '-o', '/home/nck/Documents/qkdnetsim-dev/build/.conf_check_9154aa09e7d8fab0b9cb1791d5eb1aab/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_9154aa09e7d8fab0b9cb1791d5eb1aab/testbuild/testprog[0m
 
-['/usr/bin/g++', '-pthread', 'test.cpp.1.o', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_c426a07c6f8a829078211ed90152fb75/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', '-pthread', 'test.cpp.1.o', '-o', '/home/nck/Documents/qkdnetsim-dev/build/.conf_check_9154aa09e7d8fab0b9cb1791d5eb1aab/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header stdint.h
@@ -1176,12 +1248,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_db911021dbc4c06ba3341775a79afeef/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_58af29df78c1294468d8cf81fe843d23/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '../test.cpp', '-c', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_db911021dbc4c06ba3341775a79afeef/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_db911021dbc4c06ba3341775a79afeef/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '../test.cpp', '-c', '-o', '/home/nck/Documents/qkdnetsim-dev/build/.conf_check_58af29df78c1294468d8cf81fe843d23/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_58af29df78c1294468d8cf81fe843d23/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_db911021dbc4c06ba3341775a79afeef/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/nck/Documents/qkdnetsim-dev/build/.conf_check_58af29df78c1294468d8cf81fe843d23/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header inttypes.h
@@ -1194,12 +1266,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_a30a39a77c4a5c96952f5e6cdf3d4ec8/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_1b8ba9af9a4b99c74494daac074c1742/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '../test.cpp', '-c', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_a30a39a77c4a5c96952f5e6cdf3d4ec8/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_a30a39a77c4a5c96952f5e6cdf3d4ec8/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '../test.cpp', '-c', '-o', '/home/nck/Documents/qkdnetsim-dev/build/.conf_check_1b8ba9af9a4b99c74494daac074c1742/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_1b8ba9af9a4b99c74494daac074c1742/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_a30a39a77c4a5c96952f5e6cdf3d4ec8/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/nck/Documents/qkdnetsim-dev/build/.conf_check_1b8ba9af9a4b99c74494daac074c1742/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header sys/inttypes.h
@@ -1212,24 +1284,26 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_ea88bcf554a06d6a1768cbe833ad4233/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_d8d7bf1889d82e80cb795ecb3e129d61/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_ea88bcf554a06d6a1768cbe833ad4233/testbuild/test.cpp.1.o']
-err: ../test.cpp:1:26: fatal error: sys/inttypes.h: No such file or directory
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/nck/Documents/qkdnetsim-dev/build/.conf_check_d8d7bf1889d82e80cb795ecb3e129d61/testbuild/test.cpp.1.o']
+err: ../test.cpp:1:10: fatal error: sys/inttypes.h: No such file or directory
+    1 | #include <sys/inttypes.h>
+      |          ^~~~~~~~~~~~~~~~
 compilation terminated.
 
-from /home/miralem/ns3/ns-3-dev/src/core: Test does not build: Traceback (most recent call last):
-  File "/home/miralem/ns3/ns-3-dev/.waf-1.8.19-b1fc8f7baef51bd2db4c2971909a568d/waflib/Configure.py", line 335, in run_build
+from /home/nck/Documents/qkdnetsim-dev/src/core: Test does not build: Traceback (most recent call last):
+  File "/home/nck/Documents/qkdnetsim-dev/.waf-1.8.19-b1fc8f7baef51bd2db4c2971909a568d/waflib/Configure.py", line 335, in run_build
     bld.compile()
-  File "/home/miralem/ns3/ns-3-dev/.waf-1.8.19-b1fc8f7baef51bd2db4c2971909a568d/waflib/Build.py", line 185, in compile
+  File "/home/nck/Documents/qkdnetsim-dev/.waf-1.8.19-b1fc8f7baef51bd2db4c2971909a568d/waflib/Build.py", line 185, in compile
     raise Errors.BuildError(self.producer.error)
 BuildError: Build failed
  -> task in 'testprog' failed (exit status 1): 
-	{task 140540762774672: cxx test.cpp -> test.cpp.1.o}
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_ea88bcf554a06d6a1768cbe833ad4233/testbuild/test.cpp.1.o']
+	{task 139630296638416: cxx test.cpp -> test.cpp.1.o}
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/nck/Documents/qkdnetsim-dev/build/.conf_check_d8d7bf1889d82e80cb795ecb3e129d61/testbuild/test.cpp.1.o']
 
 not found
-from /home/miralem/ns3/ns-3-dev/src/core: The configuration failed
+from /home/nck/Documents/qkdnetsim-dev/src/core: The configuration failed
 ------------------------------------------------------------------
 Checking for library rt
 ==>
@@ -1240,12 +1314,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_5fcb8d9f7f39b62c193cae76fbc00920/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_61b4bd9382c14b41342c5d405128f2aa/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-pthread', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_5fcb8d9f7f39b62c193cae76fbc00920/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_5fcb8d9f7f39b62c193cae76fbc00920/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-pthread', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/nck/Documents/qkdnetsim-dev/build/.conf_check_61b4bd9382c14b41342c5d405128f2aa/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_61b4bd9382c14b41342c5d405128f2aa/testbuild/testprog[0m
 
-['/usr/bin/g++', '-pthread', 'test.cpp.1.o', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_5fcb8d9f7f39b62c193cae76fbc00920/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lrt']
+['/usr/bin/g++', '-pthread', 'test.cpp.1.o', '-o', '/home/nck/Documents/qkdnetsim-dev/build/.conf_check_61b4bd9382c14b41342c5d405128f2aa/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lrt']
 yes
 ------------------------------------------------------------------
 Checking for header sys/ioctl.h
@@ -1258,12 +1332,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_64c23c73930b9aaec811a0d0842a99f5/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_fd52c4617a431c58fd5fc9cb64eee953/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_64c23c73930b9aaec811a0d0842a99f5/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_64c23c73930b9aaec811a0d0842a99f5/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', '/home/nck/Documents/qkdnetsim-dev/build/.conf_check_fd52c4617a431c58fd5fc9cb64eee953/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_fd52c4617a431c58fd5fc9cb64eee953/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_64c23c73930b9aaec811a0d0842a99f5/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/nck/Documents/qkdnetsim-dev/build/.conf_check_fd52c4617a431c58fd5fc9cb64eee953/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header net/if.h
@@ -1276,12 +1350,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_bc02143ce928c7a43fd3db472466c62a/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_825f80bf0ddb24e40e61abe155045f30/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '../test.cpp', '-c', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_bc02143ce928c7a43fd3db472466c62a/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_bc02143ce928c7a43fd3db472466c62a/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '../test.cpp', '-c', '-o', '/home/nck/Documents/qkdnetsim-dev/build/.conf_check_825f80bf0ddb24e40e61abe155045f30/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_825f80bf0ddb24e40e61abe155045f30/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_bc02143ce928c7a43fd3db472466c62a/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/nck/Documents/qkdnetsim-dev/build/.conf_check_825f80bf0ddb24e40e61abe155045f30/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header net/ethernet.h
@@ -1294,12 +1368,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_cd4eeccc92073701fe37e606f507cc1d/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_6450031ff594978d29f2666388d6188d/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '../test.cpp', '-c', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_cd4eeccc92073701fe37e606f507cc1d/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_cd4eeccc92073701fe37e606f507cc1d/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '../test.cpp', '-c', '-o', '/home/nck/Documents/qkdnetsim-dev/build/.conf_check_6450031ff594978d29f2666388d6188d/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_6450031ff594978d29f2666388d6188d/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_cd4eeccc92073701fe37e606f507cc1d/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/nck/Documents/qkdnetsim-dev/build/.conf_check_6450031ff594978d29f2666388d6188d/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header linux/if_tun.h
@@ -1312,12 +1386,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_82be0f8e5442b32656da06526e04c96f/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_1c81c96d8b692032a584acabb2272393/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '../test.cpp', '-c', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_82be0f8e5442b32656da06526e04c96f/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_82be0f8e5442b32656da06526e04c96f/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '../test.cpp', '-c', '-o', '/home/nck/Documents/qkdnetsim-dev/build/.conf_check_1c81c96d8b692032a584acabb2272393/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_1c81c96d8b692032a584acabb2272393/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_82be0f8e5442b32656da06526e04c96f/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/nck/Documents/qkdnetsim-dev/build/.conf_check_1c81c96d8b692032a584acabb2272393/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header netpacket/packet.h
@@ -1330,18 +1404,15 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_797435ed4cb8ac393d41214a0a8dda58/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_a552ef3b986b91e60aa9744c773d4db9/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_IF_TUN_H=1', '../test.cpp', '-c', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_797435ed4cb8ac393d41214a0a8dda58/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_797435ed4cb8ac393d41214a0a8dda58/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_IF_TUN_H=1', '../test.cpp', '-c', '-o', '/home/nck/Documents/qkdnetsim-dev/build/.conf_check_a552ef3b986b91e60aa9744c773d4db9/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_a552ef3b986b91e60aa9744c773d4db9/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_797435ed4cb8ac393d41214a0a8dda58/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/nck/Documents/qkdnetsim-dev/build/.conf_check_a552ef3b986b91e60aa9744c773d4db9/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for NSC location
-not found
-------------------------------------------------------------------
-Checking for OpenFlow location
 not found
 ------------------------------------------------------------------
 Checking for 'sqlite3'
@@ -1360,91 +1431,75 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_82be0f8e5442b32656da06526e04c96f/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_1c81c96d8b692032a584acabb2272393/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '../test.cpp', '-c', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_82be0f8e5442b32656da06526e04c96f/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_82be0f8e5442b32656da06526e04c96f/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '../test.cpp', '-c', '-o', '/home/nck/Documents/qkdnetsim-dev/build/.conf_check_1c81c96d8b692032a584acabb2272393/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_1c81c96d8b692032a584acabb2272393/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_82be0f8e5442b32656da06526e04c96f/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/nck/Documents/qkdnetsim-dev/build/.conf_check_1c81c96d8b692032a584acabb2272393/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for program 'sudo'
 /usr/bin/sudo
-find program=['sudo'] paths=['/root/.nvm/versions/node/v8.9.3/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games'] var='SUDO' -> ['/usr/bin/sudo']
+find program=['sudo'] paths=['/home/nck/anaconda3/condabin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='SUDO' -> ['/usr/bin/sudo']
 ------------------------------------------------------------------
 Checking for program 'valgrind'
 /usr/bin/valgrind
-find program=['valgrind'] paths=['/root/.nvm/versions/node/v8.9.3/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games'] var='VALGRIND' -> ['/usr/bin/valgrind']
+find program=['valgrind'] paths=['/home/nck/anaconda3/condabin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='VALGRIND' -> ['/usr/bin/valgrind']
 ------------------------------------------------------------------
 Checking for 'gsl'
 ['/usr/bin/pkg-config', '--cflags', '--libs', 'gsl']
-err: Package gsl was not found in the pkg-config search path.
-Perhaps you should add the directory containing `gsl.pc'
-to the PKG_CONFIG_PATH environment variable
-No package 'gsl' found
+out: -lgsl -lgslcblas -lm
 
-not found
-from /home/miralem/ns3/ns-3-dev: The configuration failed
+yes
 ------------------------------------------------------------------
 python-config
-not found
-find program=['libgcrypt-config'] paths=['/root/.nvm/versions/node/v8.9.3/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games'] var='LIBGCRYPT_CONFIG' -> None
-from /home/miralem/ns3/ns-3-dev: Could not find the program ['libgcrypt-config']
+/usr/bin/libgcrypt-config
+find program=['libgcrypt-config'] paths=['/home/nck/anaconda3/condabin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='LIBGCRYPT_CONFIG' -> ['/usr/bin/libgcrypt-config']
 ------------------------------------------------------------------
-Checking for compilation flag -Wno-error=deprecated-d... support
+Checking for libgcrypt
+['/usr/bin/libgcrypt-config', '--cflags', '--libs']
+out: 
+-L/usr/lib/x86_64-linux-gnu -lgcrypt
+
+yes
+------------------------------------------------------------------
+Checking for compilation flag -fstrict-aliasing support
 ==>
 int main() { return 0; }
 <==
-[1/1] Compiling [32mbuild/.conf_check_0ee9ec71bd8b6a1e1b691719861cc87a/test.cpp[0m
+[1/1] Compiling [32mbuild/.conf_check_bfcbbaa1a50fdd0dfcb9f5a6f431263b/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.cpp', '-c', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_0ee9ec71bd8b6a1e1b691719861cc87a/testbuild/test.cpp.1.o']
-ok
-------------------------------------------------------------------
-Checking for compilation flag -Wno-error=deprecated-d... support
-==>
-int main() { return 0; }
-<==
-[1/1] Compiling [32mbuild/.conf_check_615a4447adce51e135811046d2ad921e/test.c[0m
-
-['/usr/bin/gcc', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.c', '-c', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_615a4447adce51e135811046d2ad921e/testbuild/test.c.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-fstrict-aliasing', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '-DHAVE_=1', '../test.cpp', '-c', '-o', '/home/nck/Documents/qkdnetsim-dev/build/.conf_check_bfcbbaa1a50fdd0dfcb9f5a6f431263b/testbuild/test.cpp.1.o']
 ok
 ------------------------------------------------------------------
 Checking for compilation flag -fstrict-aliasing support
 ==>
 int main() { return 0; }
 <==
-[1/1] Compiling [32mbuild/.conf_check_0ee9ec71bd8b6a1e1b691719861cc87a/test.cpp[0m
+[1/1] Compiling [32mbuild/.conf_check_de06af08a138fe880cda520fe41fa4ce/test.c[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-error=deprecated-declarations', '-fstrict-aliasing', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.cpp', '-c', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_0ee9ec71bd8b6a1e1b691719861cc87a/testbuild/test.cpp.1.o']
-ok
-------------------------------------------------------------------
-Checking for compilation flag -fstrict-aliasing support
-==>
-int main() { return 0; }
-<==
-[1/1] Compiling [32mbuild/.conf_check_615a4447adce51e135811046d2ad921e/test.c[0m
-
-['/usr/bin/gcc', '-fstrict-aliasing', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.c', '-c', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_615a4447adce51e135811046d2ad921e/testbuild/test.c.1.o']
+['/usr/bin/gcc', '-fstrict-aliasing', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '-DHAVE_=1', '../test.c', '-c', '-o', '/home/nck/Documents/qkdnetsim-dev/build/.conf_check_de06af08a138fe880cda520fe41fa4ce/testbuild/test.c.1.o']
 ok
 ------------------------------------------------------------------
 Checking for compilation flag -Wstrict-aliasing support
 ==>
 int main() { return 0; }
 <==
-[1/1] Compiling [32mbuild/.conf_check_0ee9ec71bd8b6a1e1b691719861cc87a/test.cpp[0m
+[1/1] Compiling [32mbuild/.conf_check_bfcbbaa1a50fdd0dfcb9f5a6f431263b/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-error=deprecated-declarations', '-fstrict-aliasing', '-Wstrict-aliasing', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.cpp', '-c', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_0ee9ec71bd8b6a1e1b691719861cc87a/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-fstrict-aliasing', '-Wstrict-aliasing', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '-DHAVE_=1', '../test.cpp', '-c', '-o', '/home/nck/Documents/qkdnetsim-dev/build/.conf_check_bfcbbaa1a50fdd0dfcb9f5a6f431263b/testbuild/test.cpp.1.o']
 ok
 ------------------------------------------------------------------
 Checking for compilation flag -Wstrict-aliasing support
 ==>
 int main() { return 0; }
 <==
-[1/1] Compiling [32mbuild/.conf_check_615a4447adce51e135811046d2ad921e/test.c[0m
+[1/1] Compiling [32mbuild/.conf_check_de06af08a138fe880cda520fe41fa4ce/test.c[0m
 
-['/usr/bin/gcc', '-Wstrict-aliasing', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.c', '-c', '-o', '/home/miralem/ns3/ns-3-dev/build/.conf_check_615a4447adce51e135811046d2ad921e/testbuild/test.c.1.o']
+['/usr/bin/gcc', '-Wstrict-aliasing', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '-DHAVE_=1', '../test.c', '-c', '-o', '/home/nck/Documents/qkdnetsim-dev/build/.conf_check_de06af08a138fe880cda520fe41fa4ce/testbuild/test.c.1.o']
 ok
 ------------------------------------------------------------------
 Checking for program 'doxygen'
 /usr/bin/doxygen
-find program=['doxygen'] paths=['/root/.nvm/versions/node/v8.9.3/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games'] var='DOXYGEN' -> ['/usr/bin/doxygen']
+find program=['doxygen'] paths=['/home/nck/anaconda3/condabin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='DOXYGEN' -> ['/usr/bin/doxygen']
