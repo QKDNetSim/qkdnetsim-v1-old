@@ -298,8 +298,7 @@ QKDCrypto::CheckForResourcesToProcessThePacket(
 
     NS_LOG_FUNCTION(this << p << TOSBand);
 
-    if(QKDbuffer == 0) 
-        return false;
+    if(QKDbuffer == 0) return false;
 
     QKDInternalTag tag;
     p->PeekPacketTag(tag);
@@ -372,8 +371,11 @@ QKDCrypto::ProcessOutgoingPacket (
     //QKD INTERNAL NEXT HOP TAG 
     bool QKDInternalTOSTagPresent = false;
     QKDInternalTOSTag qkdNextHopTag; 
-    if(p->RemovePacketTag(qkdNextHopTag))
+
+    if(p->RemovePacketTag(qkdNextHopTag)){
         QKDInternalTOSTagPresent = true; 
+        NS_LOG_FUNCTION( this << "Found QKDInternalTOSTag value" << (uint32_t) qkdNextHopTag.GetTos() ) ;
+    }
 
     std::string plainText;    
     std::string cipherText;
@@ -553,7 +555,7 @@ QKDCrypto::ProcessOutgoingPacket (
     //////////////////////////////////////////////
 
     if(QKDInternalTOSTagPresent){
-        NS_LOG_FUNCTION (this << "Adding QKD Internal NextHop Tag!");
+        NS_LOG_FUNCTION (this << "Adding QKD Internal NextHop Tag! " << (uint32_t) qkdNextHopTag.GetTos() ) ;
         outputPacket->AddPacketTag(qkdNextHopTag);
     }
 
@@ -946,6 +948,8 @@ QKDCrypto::PacketToString (Ptr<Packet> p)
             // finished, clear the header
             headerContentSize += tcpHeader->GetSerializedSize();//tcpHeader->GetSerializedSize(); 
             NS_LOG_FUNCTION(this << "tcpHeader  size: " << tcpHeader->GetSerializedSize());
+            NS_LOG_FUNCTION(this << "tcpHeader src port: " << tcpHeader->GetSourcePort());
+            NS_LOG_FUNCTION(this << "tcpHeader dst port: " << tcpHeader->GetDestinationPort());
             delete tcpHeader;
  
             uint8_t *tcpBuffer = new uint8_t[tcpHeaderBuffer.GetSerializedSize() + 4];
@@ -2671,6 +2675,8 @@ QKDCrypto::Decrypt (Ptr<Packet> p, Ptr<QKDBuffer> QKDbuffer)
             counter+=tcpheaderSize;
 
             NS_LOG_FUNCTION(this << "TCP Header decrypted" << tcpheaderSize);
+            NS_LOG_FUNCTION(this << "tcpHeader src port: " << tcpHeader.GetSourcePort());
+            NS_LOG_FUNCTION(this << "tcpHeader dst port: " << tcpHeader.GetDestinationPort());
             /*
             std::cout << "\n";
             tcpHeader.Print(std::cout);                

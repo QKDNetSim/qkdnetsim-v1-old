@@ -709,7 +709,10 @@ RoutingProtocol::NotifyInterfaceUp (uint32_t i)
   NS_ASSERT (socket != 0);
   socket->SetRecvCallback (MakeCallback (&RoutingProtocol::RecvAodvq, this));
   socket->BindToNetDevice (l3->GetNetDevice (i));
-  socket->Bind (InetSocketAddress (iface.GetLocal (), AODVQ_PORT));
+  InetSocketAddress locAddr (iface.GetLocal (), AODVQ_PORT);;
+  locAddr.SetTos (16);
+  socket->Bind (locAddr);
+  socket->SetIpTos(16); //16 - band 0; 2 - band 1 
   socket->SetAllowBroadcast (true);
   socket->SetIpRecvTtl (true);
   m_socketAddresses.insert (std::make_pair (socket, iface));
@@ -720,7 +723,10 @@ RoutingProtocol::NotifyInterfaceUp (uint32_t i)
   NS_ASSERT (socket != 0);
   socket->SetRecvCallback (MakeCallback (&RoutingProtocol::RecvAodvq, this));
   socket->BindToNetDevice (l3->GetNetDevice (i));
-  socket->Bind (InetSocketAddress (iface.GetBroadcast (), AODVQ_PORT));
+  InetSocketAddress locAddr2 (iface.GetBroadcast (), AODVQ_PORT);
+  locAddr2.SetTos (16);
+  socket->Bind (locAddr2);
+  socket->SetIpTos(16); //16 - band 0; 2 - band 1 
   socket->SetAllowBroadcast (true);
   socket->SetIpRecvTtl (true);
   m_socketSubnetBroadcastAddresses.insert (std::make_pair (socket, iface));
@@ -819,7 +825,10 @@ RoutingProtocol::NotifyAddAddress (uint32_t i, Ipv4InterfaceAddress address)
           NS_ASSERT (socket != 0);
           socket->SetRecvCallback (MakeCallback (&RoutingProtocol::RecvAodvq,this));
           socket->BindToNetDevice (l3->GetNetDevice (i));
-          socket->Bind (InetSocketAddress (iface.GetLocal (), AODVQ_PORT));
+          InetSocketAddress locAddr3 (iface.GetLocal (), AODVQ_PORT);; 
+          locAddr3.SetTos (16);
+          socket->Bind (locAddr3); 
+          socket->SetIpTos(16); //16 - band 0; 2 - band 1 
           socket->SetAllowBroadcast (true);
           m_socketAddresses.insert (std::make_pair (socket, iface));
 
@@ -829,7 +838,10 @@ RoutingProtocol::NotifyAddAddress (uint32_t i, Ipv4InterfaceAddress address)
           NS_ASSERT (socket != 0);
           socket->SetRecvCallback (MakeCallback (&RoutingProtocol::RecvAodvq, this));
           socket->BindToNetDevice (l3->GetNetDevice (i));
-          socket->Bind (InetSocketAddress (iface.GetBroadcast (), AODVQ_PORT));
+          InetSocketAddress locAddr4 (iface.GetBroadcast (), AODVQ_PORT);
+          locAddr4.SetTos (16);
+          socket->Bind (locAddr4);
+          socket->SetIpTos(16); //16 - band 0; 2 - band 1 
           socket->SetAllowBroadcast (true);
           socket->SetIpRecvTtl (true);
           m_socketSubnetBroadcastAddresses.insert (std::make_pair (socket, iface));
@@ -878,7 +890,10 @@ RoutingProtocol::NotifyRemoveAddress (uint32_t i, Ipv4InterfaceAddress address)
           socket->SetRecvCallback (MakeCallback (&RoutingProtocol::RecvAodvq, this));
           // Bind to any IP address so that broadcasts can be received
           socket->BindToNetDevice (l3->GetNetDevice (i));
-          socket->Bind (InetSocketAddress (iface.GetLocal (), AODVQ_PORT));
+          InetSocketAddress locAddr5 (iface.GetLocal (), AODVQ_PORT); 
+          locAddr5.SetTos (16);
+          socket->Bind (locAddr5);
+          socket->SetIpTos(16); //16 - band 0; 2 - band 1 
           socket->SetAllowBroadcast (true);
           socket->SetIpRecvTtl (true);
           m_socketAddresses.insert (std::make_pair (socket, iface));
@@ -889,7 +904,10 @@ RoutingProtocol::NotifyRemoveAddress (uint32_t i, Ipv4InterfaceAddress address)
           NS_ASSERT (socket != 0);
           socket->SetRecvCallback (MakeCallback (&RoutingProtocol::RecvAodvq, this));
           socket->BindToNetDevice (l3->GetNetDevice (i));
-          socket->Bind (InetSocketAddress (iface.GetBroadcast (), AODVQ_PORT));
+          InetSocketAddress locAddr6 (iface.GetBroadcast (), AODVQ_PORT);
+          locAddr6.SetTos (16);
+          socket->Bind (locAddr6);
+          socket->SetIpTos(16); //16 - band 0; 2 - band 1 
           socket->SetAllowBroadcast (true);
           socket->SetIpRecvTtl (true);
           m_socketSubnetBroadcastAddresses.insert (std::make_pair (socket, iface));

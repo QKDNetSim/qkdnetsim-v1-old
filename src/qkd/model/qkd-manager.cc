@@ -364,6 +364,16 @@ QKDManager::VirtualSend (
     std::cout << "--------End of QKDManager::VirtualSend-----------\n";
     */
 
+    /**
+    *   Since some routing protocols might not be aware of QKDbuffers and QKD materials in these buffers, 
+    *   we need to analyze the status of QKD buffers priori processing of packet. If there is enough key material
+    *   packet is processed. Otherwise, packet is silently discarded
+    */
+    if(CheckForResourcesToProcessThePacket(p, source) == false){
+        NS_LOG_DEBUG (this << "WE DO NOT HAVE ENOUGH KEY MATERIAL TO PROCESS THIS PACKET!\n Discarding this path!" << "\n");
+        return false;
+    }
+
     //PERFORM ENCRYPTION and AUTHENTICATION
     Ptr<NetDevice> SourceDevice = GetSourceNetDevice(source);
     std::vector<Ptr<Packet> > processedPackets = ProcessOutgoingRequest (SourceDevice, p);

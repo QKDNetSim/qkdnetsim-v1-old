@@ -264,7 +264,11 @@ UdpSocketImpl::Bind (const Address &address)
       InetSocketAddress transport = InetSocketAddress::ConvertFrom (address);
       Ipv4Address ipv4 = transport.GetIpv4 ();
       uint16_t port = transport.GetPort ();
-      SetIpTos (transport.GetTos ());
+      if(transport.GetTos () > 0)
+        SetIpTos (transport.GetTos ());
+      else if(GetIpTos () > 0)
+        transport.SetTos (GetIpTos ());
+
       if (ipv4 == Ipv4Address::GetAny () && port == 0)
         {
           m_endPoint = m_udp->Allocate ();
@@ -400,7 +404,12 @@ UdpSocketImpl::Connect (const Address & address)
     {
       InetSocketAddress transport = InetSocketAddress::ConvertFrom (address);
       m_defaultAddress = Address(transport.GetIpv4 ());
-      m_defaultPort = transport.GetPort ();
+      
+      if(transport.GetTos () > 0)
+        SetIpTos (transport.GetTos ());
+      else if(GetIpTos () > 0)
+        transport.SetTos (GetIpTos ());
+
       SetIpTos (transport.GetTos ());
       m_connected = true;
       NotifyConnectionSucceeded ();
@@ -811,7 +820,7 @@ UdpSocketImpl::SendTo (Ptr<Packet> p, uint32_t flags, const Address &address)
       InetSocketAddress transport = InetSocketAddress::ConvertFrom (address);
       Ipv4Address ipv4 = transport.GetIpv4 ();
       uint16_t port = transport.GetPort ();
-      uint8_t tos = transport.GetTos ();
+      uint8_t tos = (transport.GetTos () > 0) ? transport.GetTos () : GetIpTos();
       return DoSendTo (p, ipv4, port, tos);
     }
   else if (Inet6SocketAddress::IsMatchingType (address))
