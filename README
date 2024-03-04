@@ -1,43 +1,9 @@
 
-    The Network Simulator, Version 3 + QKD
-    --------------------------------
-
-Quantum Key Distribution Network Simulation Module in the Network Simulator NS-3 (ns-3-dev)
-
-Project webpage: http://www.qkdnetsim.info/
+## This repository has been DEPRECATED! 
+## We advise you to use the QKDNetSim module v2.0 which is available via www.qkdnetsim.info.
 
 As research in Quantum Key Distribution (QKD) technology grows larger and more complex, the need for highly accurate and scalable simulation technologies becomes important to assess the practical feasibility and foresee difficulties in the practical implementation of theoretical achievements. Due to the specificity of QKD link which requires optical and Internet connection between the network nodes, it is very costly to deploy a complete testbed containing multiple network hosts and links to validate and verify a certain network algorithm or protocol. The network simulators in these circumstances save a lot of money and time in accomplishing such task. A simulation environment offers the creation of complex network topologies, a high degree of control and repeatable experiments, which in turn allows researchers to conduct exactly the same experiments and confirm their results.
 
 The aim of Quantum Key Distribution Network Simulation Module (QKDNetSim) project was not to develop the entire simulator from scratch but to develop the QKD simulation module in some of the already existing well-proven simulators. QKDNetSim is intended to facilitate additional understanding of QKD technology with respect to the existing network solutions. It seeks to serve as the natural playground for taking the further steps into this research direction (even towards practical exploitation in subsequent projects or product design).
 
-Here, we provide the QKDNetSim source code which was developed in the network simulator of version 3 (NS-3). The module supports simulation of QKD network in overlay mode or in a single TCP/IP mode. Therefore, it can be used for simulation of other network technologies regardless of QKD.
-
-
-Table of Contents:
-------------------
-
-1) An overview
-2) Building ns-3
-3) Running ns-3
-4) Getting access to the ns-3 documentation
-5) Working with the development version of ns-3
-
-Note:  Much more substantial information about ns-3 can be found at
-http://www.nsnam.org
-
-Installation:
-----------------
-
-sudo apt-get update
-sudo apt-get upgrade
-sudo apt-get install gcc g++ python python-dev mercurial bzr gdb valgrind gsl-bin doxygen graphviz imagemagick texlive texlive-latex-extra texlive-generic-extra texlive-generic-recommended texinfo dia texlive texlive-latex-extra texlive-extra-utils texlive-generic-recommended texi2html python-pygraphviz python-kiwi libboost-all-dev git flex bison tcpdump sqlite sqlite3 libsqlite3-dev libxml2 libxml2-dev libgtk2.0-0 libgtk2.0-dev uncrustify libgsl23 python-pygccxml libcrypto++-dev libcrypto++-doc libcrypto++-utils -y
-git clone https://github.com/QKDNetSim/qkdnetsim-dev.git
-cd qkdnetsim-dev
-./waf configure
-./waf
-
-
-Test script:
-----------------
-
-./waf --run scratch/qkd_channel_test
+Here, we provide the QKDNetSim source code which was developed in the network simulator of version 3 (NS-3).
