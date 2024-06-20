@@ -42,9 +42,6 @@
 #include "ipv4-interface.h"
 #include "ipv4-raw-socket-impl.h"
 
-#include "ns3/qkd-internal-tag.h"
-#include "ns3/qkd-manager.h"
-
 namespace ns3 {
 
 NS_LOG_COMPONENT_DEFINE ("Ipv4L3Protocol");
@@ -778,15 +775,6 @@ Ipv4L3Protocol::Send (Ptr<Packet> packet,
           if (sendIt)
             {
               Ptr<Packet> packetCopy = packet->Copy ();
-
-              //////////////////////////////
-              //  QKDInternalTOSTag
-              /////////////////////////////
-              QKDInternalTOSTag qkdNextHopTag; 
-              qkdNextHopTag.SetTos(tos);
-              if(packetCopy->PeekPacketTag(qkdNextHopTag) == false)
-              packetCopy->AddPacketTag(qkdNextHopTag);
-
               NS_ASSERT (packetCopy->GetSize () <= outInterface->GetDevice ()->GetMtu ());
 
               m_sendOutgoingTrace (ipHeader, packetCopy, ifaceIndex);
@@ -813,14 +801,6 @@ Ipv4L3Protocol::Send (Ptr<Packet> packet,
               NS_LOG_LOGIC ("Ipv4L3Protocol::Send case 2:  subnet directed bcast to " << ifAddr.GetLocal ());
               ipHeader = BuildHeader (source, destination, protocol, packet->GetSize (), ttl, tos, mayFragment);
               Ptr<Packet> packetCopy = packet->Copy ();
-              //////////////////////////////
-              //  QKDInternalTOSTag
-              /////////////////////////////
-              QKDInternalTOSTag qkdNextHopTag; 
-              qkdNextHopTag.SetTos(tos);
-              if(packetCopy->PeekPacketTag(qkdNextHopTag) == false)
-              packetCopy->AddPacketTag(qkdNextHopTag);
-
               m_sendOutgoingTrace (ipHeader, packetCopy, ifaceIndex);
               CallTxTrace (ipHeader, packetCopy, m_node->GetObject<Ipv4> (), ifaceIndex);
               outInterface->Send (packetCopy, ipHeader, destination);
@@ -834,13 +814,6 @@ Ipv4L3Protocol::Send (Ptr<Packet> packet,
   if (route && route->GetGateway () != Ipv4Address ())
     {
       Ptr<Packet> packetCopy = packet->Copy ();
-      //////////////////////////////
-      //  QKDInternalTOSTag
-      /////////////////////////////
-      QKDInternalTOSTag qkdNextHopTag; 
-      qkdNextHopTag.SetTos(tos);
-      if(packetCopy->PeekPacketTag(qkdNextHopTag) == false)
-      packetCopy->AddPacketTag(qkdNextHopTag);
 
       NS_LOG_LOGIC ("Ipv4L3Protocol::Send case 3:  passed in with route");
       ipHeader = BuildHeader (source, destination, protocol, packetCopy->GetSize (), ttl, tos, mayFragment);
@@ -875,15 +848,6 @@ Ipv4L3Protocol::Send (Ptr<Packet> packet,
   if (newRoute)
     {
       Ptr<Packet> packetCopy = packet->Copy ();
-      
-      //////////////////////////////
-      //  QKDInternalTOSTag
-      /////////////////////////////
-      QKDInternalTOSTag qkdNextHopTag; 
-      qkdNextHopTag.SetTos(tos);
-      if(packetCopy->PeekPacketTag(qkdNextHopTag) == false)
-      packetCopy->AddPacketTag(qkdNextHopTag);
-
       int32_t interface = GetInterfaceForDevice (newRoute->GetOutputDevice ());
       m_sendOutgoingTrace (ipHeader, packet, interface);
       SendRealOut (newRoute, packetCopy, ipHeader);
@@ -1082,15 +1046,6 @@ Ipv4L3Protocol::IpForward (Ptr<Ipv4Route> rtentry, Ptr<const Packet> p, const Ip
       return;
     }
     
-  //////////////////////////////
-  //  QKDInternalTOSTag
-  /////////////////////////////
-  QKDInternalTOSTag qkdNextHopTag;
-  packet->RemovePacketTag(qkdNextHopTag);
-  qkdNextHopTag.SetTos(ipHeader.GetTos ());
-  if(packet->PeekPacketTag(qkdNextHopTag) == false)
-  packet->AddPacketTag(qkdNextHopTag);
-
   // in case the packet still has a priority tag attached, remove it
   SocketPriorityTag priorityTag;
   packet->RemovePacketTag (priorityTag);
